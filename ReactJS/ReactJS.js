@@ -1,4 +1,5 @@
 /*
+!{libgen.is, singlelogin.me}
 Coding Addict -- YouTube CHannel { John Smilga: https://johnsmilga.com/, ***** }
 PedroTech -- YouTube Channel
 CodeWithArjun -- YouTube Channel 4 Full Stack Spring Boot + React CRUD
@@ -59,7 +60,7 @@ Build a COMPLETE React Admin Dashboard App - React, Material UI, Data Grid, Ligh
 9. UNIT TESTING IN REACT
 10. EXPLORE THE FIELD (GraphQL, NEXT.JS)
 
-Get Programming with Node.js {Recommended: e-book}
+!Get Programming with Node.js {Recommended: e-book}
 
 Build a Movie-Search App Using React (With Hooks)
 
