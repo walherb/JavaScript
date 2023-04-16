@@ -4,6 +4,9 @@
 git reset --hard HEAD
 git log --stat
 git log origin/master..HEAD
+git update-index --really-refresh
+git checkout -b <branch_name> #SHA Hash
+!git mv folder-name folder-name-temp'.. than renamed back to its original name :)
 Coding Addict -- YouTube CHannel { John Smilga: https://johnsmilga.com/, ***** }
 PedroTech -- YouTube Channel
 CodeWithArjun -- YouTube Channel 4 Full Stack Spring Boot + React CRUD
