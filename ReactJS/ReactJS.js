@@ -1,4 +1,5 @@
 /*
+!Jonathan Wexler - Get Programming with Node.js-Manning Publications (2019).pdf
 !{libgen.is, singlelogin.me}
 !Graphic Javascript Algorithms -> {e-book}
 git reset --hard HEAD
