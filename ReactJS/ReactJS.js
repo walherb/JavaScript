@@ -1,5 +1,9 @@
 /*
 !{libgen.is, singlelogin.me}
+!Graphic Javascript Algorithms -> {e-book}
+git reset --hard HEAD
+git log --stat
+git log origin/master..HEAD
 Coding Addict -- YouTube CHannel { John Smilga: https://johnsmilga.com/, ***** }
 PedroTech -- YouTube Channel
 CodeWithArjun -- YouTube Channel 4 Full Stack Spring Boot + React CRUD
