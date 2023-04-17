@@ -8,6 +8,61 @@ git log origin/master..HEAD
 git update-index --really-refresh
 git checkout -b <branch_name> #SHA Hash
 !git mv folder-name folder-name-temp'.. than renamed back to its original name :)
+
+!curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.bashrc
+nvm ls
+nvm ls-remote
+nvm install lts/*
+nvm install node --lts
+nvm install 18.16.0
+nvm use 18.16.0
+nvm alias default 18.16.0 (*****)
+nvm alias default lts/boron
+nvm run default --version
+nvm exec 18.16.0 server.js
+nvm run 18.16.0 app.js
+nvm uninstall 18.15.0
+nvm cache clear
+
+!npm i -g pm2
+!pm2 start app.js 
+pm2 logs
+pm2 logs big-api
+# Start the maximum processes depending on available CPUs
+$ pm2 start app.js -i 0
+
+# Start all apps
+$ pm2 start processes.json
+{
+  "name"             : "node-app",
+  "cwd"              : "/srv/node-app/current",
+  "args"             : ["--toto=heya coco", "-d", "1"],
+  "script"           : "bin/app.js",
+  "node_args"        : ["--harmony", " --max-stack-size=102400000"],
+  "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+  "error_file"       : "/var/log/node-app/node-app.stderr.log",
+  "out_file"         : "log/node-app.stdout.log",
+  "pid_file"         : "pids/node-geo-api.pid",
+  "instances"        : 6, //or 0 => 'max'
+  "min_uptime"       : "200s", // 200 seconds, defaults to 1000
+  "max_restarts"     : 10, // defaults to 15
+  "max_memory_restart": "1M", // 1 megabytes, e.g.: "2G", "10M", "100K", 1024 the default unit is byte.
+  "cron_restart"     : "1 0 * * *",
+  "watch"            : false,
+  "ignore_watch"      : ["[\\/\\\\]\\./", "node_modules"],
+  "merge_logs"       : true,
+  "exec_interpreter" : "node",
+  "exec_mode"        : "fork",
+  "autorestart"      : false, // enable/disable automatic restart when an app crashes or exits
+  "vizion"           : false, // enable/disable vizion features (versioning control)
+  "env": {
+    "NODE_ENV": "production",
+    "AWESOME_SERVICE_API_TOKEN": "xxx"
+  }
+}
+
 Coding Addict -- YouTube CHannel { John Smilga: https://johnsmilga.com/, ***** }
 PedroTech -- YouTube Channel
 CodeWithArjun -- YouTube Channel 4 Full Stack Spring Boot + React CRUD
