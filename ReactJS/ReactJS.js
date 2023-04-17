@@ -28,10 +28,26 @@ nvm cache clear
 
 !npm i -g pm2
 !pm2 start app.js 
+pm2 list
 pm2 logs
 pm2 logs big-api
 # Start the maximum processes depending on available CPUs
 $ pm2 start app.js -i 0
+pm2 start api.js -i <processes>
+pm2 reload all
+
+$ pm2 stop     <app_name|namespace|id|'all'|json_conf>
+$ pm2 restart  <app_name|namespace|id|'all'|json_conf>
+$ pm2 delete   <app_name|namespace|id|'all'|json_conf>
+
+$ pm2 describe <id|app_name>
+$ pm2 monit
+
+$ pm2 set pm2:sysmonit true
+$ pm2 update
+
+npm install pm2@latest -g
+pm2 update
 
 # Start all apps
 $ pm2 start processes.json

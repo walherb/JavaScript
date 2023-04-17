@@ -1,3 +1,52 @@
+// ------------ Run node.js service with systemd -------------------
+// /opt/nodeserver/server.js
+const http = require('http');
+
+const hostname = '0.0.0.0'; // listen on all ports
+const port = 1337;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end("Hello World\n");
+}).listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+node /opt/nodeserver/server.js
+Create /etc/systemd/system/nodeserver.service
+/*
+[Unit]
+Description=Node.js Example Server
+#Requires=After=mysql.service       # Requires the mysql service to run first
+
+[Service]
+ExecStart=/usr/local/bin/node /opt/nodeserver/server.js
+# Required on some systems
+#WorkingDirectory=/opt/nodeserver
+Restart=always
+# Restart service after 10 seconds if node service crashes
+RestartSec=10
+# Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nodejs-example
+#User=<alternate user>
+#Group=<alternate group>
+Environment=NODE_ENV=production PORT=1337
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl enable nodeserver.service
+sudo systemctl start nodeserver.service
+sudo systemctl status nodeserver.service
+sudo systemctl daemon-reload
+sudo systemctl restart nodeserver.service
+sudo systemctl status nodeserver.service
+*/
+
+
+
 // https://medium.com/bb-tutorials-and-thoughts/how-to-write-production-ready-node-js-rest-api-javascript-version-db64d3941106
 
 //! Fullstack React with TypeScript: Learn Pro Patterns for Hooks, Testing, Redux, SSR, and GraphQL
