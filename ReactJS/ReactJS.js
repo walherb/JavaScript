@@ -1,4 +1,52 @@
 /*
+!https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-pern-stack-4fc18a1e5937
+!PERN Stack Course - Postgres, Express, React, and Node
+00:00 Intro
+04:11 PERN Stack Intro
+07:58 Postgres Windows Install
+16:35 Postgres Mac install
+29:13 Postgres Documentation
+30:29 PSQL Basics
+37:04 SQL Tables
+38:53 Create Table
+45:55 Modify Tables
+48:28 Delete Databases
+50:58 Yelp Project Database
+01:09:57 Node Setup
+01:12:45 Express Setup
+01:15:57 Environment Variables
+01:19:40 First Express Route
+01:29:27 Restful API Convention
+01:32:33 Configure all routes
+01:42:34 Express Middleware
+01:54:13 Finishing Up Routes
+02:03:10 Connect Express and Postgres
+02:14:20 Get all Restaurants Route
+2:18:25 Gone one Restaurant Route
+02:28:23 Create a Restaurant Route
+02:35:28 Update A Restaurant Route
+02:43:07 Delete A Restaurant Route
+02:46:28 React Setup
+02:52:52 React Router Setup
+03:02:03 HomePage Layout
+03:14:24 React Context API
+03:20:17 Fetching Data
+03:36:12 Rendering Restaurants
+03:41:48 Adding Restaurants
+03:56:26 Deleting Restaurants
+04:03:05 Updating Restaurants
+04:26:18 Detail Page
+04:38:06 Reviews Intro
+04:39:46 Reviews Postgres Table
+04:55:20 Star Rating Component
+05:02:49 Reviews Component Layout
+05:08:18 Add Review
+05:29:06 Add Review Express Route
+05:37:43 Add Review React Component
+05:48:04 Postgres Aggregate Functions
+05:57:26 SQL Joins and Wrapping up App
+
+
 !Jonathan Wexler - Get Programming with Node.js-Manning Publications (2019).pdf
 !{libgen.is, singlelogin.me}
 !Graphic Javascript Algorithms -> {e-book}
@@ -1039,29 +1087,37 @@ render.com
 railway.app
 cyclic.sh  --> { https://overalls-seagull.cyclic.app } /api/products
 
-REACT INTO -> { 
-- JSX, 
-- COMPONENTS, 
-- PROPS, 
-- CONDITIONAL RENDERING, 
-- CSS IN REACT, 
-- LIST IN REACT 
-}
-- REACT STATES
-- CRUD IN REACT 
-- REACT LIFECYCLE + USE EFFECT 
-- WORKING WITH AN API
-- FETCHING DATA + REACT QUERY
-- REACT HOOKS COURSE
-- STATE MANAGEMENT 
-- ROUTING IN REACT
-- REACT FROMS WITH FORMIK + YUP
-- TYPESCRIPT IN REACT
-- REACT BEST PRACTICES 
-- REDUX 
-- OPTIMISATION TECHNIQUES 
-- FULL STACK PROJECT 
-- TESTING IN REACT 
+! KEY TOPICS
+- Components & Props 
+- States 
+- Hooks 
+- Redux
+- TypeScript 
+- Forms 
+- State Management 
+- Firebase Project 
+
+! React Course For Beginners - Learn React in 8 Hours
+! REACT COURSE FULL TIMESTAMPS
+00:00:00 |  Introduction
+00:07:52 |  Module 1: What is React?
+00:18:14 |  Module 2: JSX, Components, Props
+00:38:02 |  Module 3: Ternary Operators, Lists and CSS
+01:04:33 |  Module 4: States in React, useState Hook
+01:30:39 |  Module 5: CRUD in React, ToDo List
+02:10:08 |  Module 6: Component Lifecycle, useEffect Hook
+02:28:16 |  Module 7: Fetching Data from API's 
+02:57:09 |  Module 8: React Router DOM
+03:13:03 |  Module 9: State Management, useContext Hook
+03:32:02 |  Module 10: React Query
+03:51:38 |  Module 11: Forms in React
+04:19:01 |  Module 12: Custom Hooks
+04:40:27 |  Module 13: Typescript, Type Safety
+05:06:12 |  Module 14: Redux Toolkit
+05:29:29 |  Module 15: Firebase Project (Part 1)
+06:05:40 |  Module 16: Firebase Project (Part 2)
+06:46:08 |  Module 17: Firebase Project (Part 3)
+07:41:58 |  Module 18: Deploying a Firebase React App
 
 
 functrion App() {
