@@ -1033,10 +1033,35 @@ export default function App() {
 */
 
 /*
-!-------------- ReactJS Course[1] - What is React - How to setup a React App ---------------------
-- HTML & CSS
-- JavaScript
-npx create-react-app .
+!-------------- ReactJS Course[1] - What is React - How to setup a React App -----------------
+!- 3 Alternatives for Heroku's Free Tier - Full Stack & API Hosting
+render.com
+railway.app
+cyclic.sh  --> { https://overalls-seagull.cyclic.app } /api/products
+
+REACT INTO -> { 
+- JSX, 
+- COMPONENTS, 
+- PROPS, 
+- CONDITIONAL RENDERING, 
+- CSS IN REACT, 
+- LIST IN REACT 
+}
+- REACT STATES
+- CRUD IN REACT 
+- REACT LIFECYCLE + USE EFFECT 
+- WORKING WITH AN API
+- FETCHING DATA + REACT QUERY
+- REACT HOOKS COURSE
+- STATE MANAGEMENT 
+- ROUTING IN REACT
+- REACT FROMS WITH FORMIK + YUP
+- TYPESCRIPT IN REACT
+- REACT BEST PRACTICES 
+- REDUX 
+- OPTIMISATION TECHNIQUES 
+- FULL STACK PROJECT 
+- TESTING IN REACT 
 
 
 functrion App() {
