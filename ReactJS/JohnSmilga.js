@@ -55,13 +55,13 @@ const bob = {
   },
 };
 
-// const firstName = bob.first;
-// const lastName = bob.last;
-// const sister = bob.siblings.sister;
+const firstName = bob.first;
+const lastName = bob.last;
+const sister = bob.siblings.sister;
 
-// const { first, last, city } = bob;
-// const { first:aliasOfFirst, last, city } = bob;
-// console.log(aliasOfFirst,last, city);
+const { first, last, city } = bob;
+const { first:aliasOfFirst, last, city } = bob;
+console.log(aliasOfFirst,last, city);
 const {
   first,
   last,
