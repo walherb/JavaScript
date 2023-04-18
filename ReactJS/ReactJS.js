@@ -46,6 +46,9 @@
 05:48:04 Postgres Aggregate Functions
 05:57:26 SQL Joins and Wrapping up App
 
+"files.associations": {
+    "*.js": "javascriptreact"
+}
 
 !Jonathan Wexler - Get Programming with Node.js-Manning Publications (2019).pdf
 !{libgen.is, singlelogin.me}

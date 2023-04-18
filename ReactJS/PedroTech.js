@@ -35,6 +35,7 @@ const planets = [
   { name: "Uranus", isGasPlanet: true },
 ];
 01:04:33 |  Module 4: States in React, useState Hook
+!Stopped @ 35:26 mins
 01:30:39 |  Module 5: CRUD in React, ToDo List
 02:10:08 |  Module 6: Component Lifecycle, useEffect Hook
 02:28:16 |  Module 7: Fetching Data from API's 
