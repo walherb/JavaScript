@@ -2,6 +2,9 @@
 //! reactjs.org, react.dev
 //! Install Quokka.js
 // Vite -- Next Generation Frontend Tooling { better create-react-app }
+// npm create vite@latest react-dev -- --template react
+// npm install && npm run dev
+
 // npx create-react-app tutorial
 // npx create-react-app@latest tutorial {:Incase the 1st one doesn't work also helps i initiate git repo}
 // Get-ChildItem -Force  { List Hidden Files }
@@ -135,15 +138,15 @@ const friends = [...boys, ...girls, bestFriend];
 
 console.log(friends);
 
-// reference
-// const newFriends = friends;
-// copy
+reference
+const newFriends = friends;
+copy
 const newFriends = [...friends];
 newFriends[0] = 'nancy';
 console.log(friends);
 console.log(newFriends);
 
-// ES2018 - ES8 Objects
+ES2018 - ES8 Objects
 
 const person = { name: 'john', job: 'developer' };
 const newPerson = { ...person, city: 'chicago', name: 'peter' };
@@ -158,23 +161,23 @@ console.log(newPerson);
 const fruits = ['orange', 'banana', 'lemon'];
 const friends = ['john', 'peter', 'bob', 'anna', 'kelly'];
 
-// const fruit1 = fruits[0];
-// const fruit2 = fruits[1];
-// const fruit3 = fruits[2];
-// console.log(fruit1, fruit2, fruit3);
+const fruit1 = fruits[0];
+const fruit2 = fruits[1];
+const fruit3 = fruits[2];
+console.log(fruit1, fruit2, fruit3);
 
-// const [john, peter, bob, anna, kelly] = friends;
-// console.log(john, peter, bob, anna, kelly);
+const [john, peter, bob, anna, kelly] = friends;
+console.log(john, peter, bob, anna, kelly);
 const [enemy, , bob, , kelly, susan] = friends;
 console.log(enemy, bob, kelly, susan);
 
 let first = 'bob';
 let second = 'john';
 
-// let temp = second;
-// second = first;
-// first = temp;
-// console.log(first, second);
+let temp = second;
+second = first;
+first = temp;
+console.log(first, second);
 
 [second, first] = [first, second];
 console.log(first, second);
@@ -192,31 +195,31 @@ const people = [
   { name: 'anna', age: 35, position: 'intern' },
 ];
 const fruits = ['orange', 'pear', 'lemon'];
-// filter
+!filter
 const youngPeople = people.filter((person) => {
-  // if (person.age < 30) {
-  //   return person;
-  // }
+  if (person.age < 30) {
+    return person;
+  }
   return person.age < 30;
 });
 console.log(youngPeople);
 const developers = people.filter((person) => person.position === 'developer');
 console.log(developers);
 
-// no match
+!no match
 const seniorDevs = people.filter((item) => item.position === 'senior dev');
 console.log(seniorDevs);
 
-// find
+!find
 const peter = people.find((person) => person.name === 'peter');
 console.log(peter);
 const fruit = fruits.find((fruit) => fruit === 'lemon');
 console.log(fruit);
-// no match
+!no match
 const oldPerson = people.find((person) => person.age > 35);
 console.log(oldPerson);
 
-// multiple matches - first match
+!multiple matches - first match
 const randomPerson = people.find((person) => person.age < 35);
 console.log(randomPerson);
 
