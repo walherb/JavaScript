@@ -1,4 +1,43 @@
 /*
+!"files.associations": {
+    "*.js": "javascriptreact"
+}
+
+! https://react.dev/learn
+Vite -- Next Generation Frontend Tooling { better create-react-app }
+npm create vite@latest react-dev -- --template react
+npm install && npm run dev
+must be jsx
+instead of index.js, need to use main.jsx 
+dist folder created instead of build folder when u build 
+
+
+!-------------------------------------------------------------------
+<div>
+  {isLoggedIn ? (<AdminPanel />) : (<LoginForm />)}
+</div>
+
+<div>
+  {isLoggedIn && <AdminPanel />}
+</div>
+
+const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 },
+];
+
+const listItems = products.map((product) => {
+  <li key={product.id}>
+    {product.title}
+  </li>
+});
+
+return (
+  <ul>{listItems}</ul>
+);
+
+
 !https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-pern-stack-4fc18a1e5937
 !PERN Stack Course - Postgres, Express, React, and Node
 00:00 Intro
@@ -45,10 +84,6 @@
 05:37:43 Add Review React Component
 05:48:04 Postgres Aggregate Functions
 05:57:26 SQL Joins and Wrapping up App
-
-"files.associations": {
-    "*.js": "javascriptreact"
-}
 
 !Jonathan Wexler - Get Programming with Node.js-Manning Publications (2019).pdf
 !{libgen.is, singlelogin.me}
