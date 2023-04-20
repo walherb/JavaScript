@@ -1,21 +1,22 @@
-Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz   2.71 GHz
-HP ProBook 450 G4
-npn i -g typescript 
-npm init -y 
-tsconfig.json 
-{
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "strict": true,
-        "outDir": "dist",
-        "skipLibCheck": true
-    },
-    "include": ["src/**/*.ts"]
-}
-index.ts
-let x: number = 3;
-tsc
+// Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz   2.71 GHz
+// HP ProBook 450 G4
+// typescript.format.*: settings
+// typescript.format.enable to false
+// npn i -g typescript 
+// npm init -y 
+// tsconfig.json 
+// {
+//     "compilerOptions": {
+//         "target": "es5",
+//         "module": "commonjs",
+//         "strict": true,
+//         "outDir": "dist",
+//         "skipLibCheck": true
+//     },
+//     "include": ["src/**/*.ts"]
+// }
+// index.ts
+// tsc 
 let x: number = 3;
 let y: string = "Hello World!";
 let z: boolean = true;
