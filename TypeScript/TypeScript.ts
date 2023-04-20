@@ -1,4 +1,5 @@
 Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz   2.71 GHz
+HP ProBook 450 G4
 npn i -g typescript 
 npm init -y 
 tsconfig.json 
