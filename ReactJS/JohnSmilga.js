@@ -1,6 +1,7 @@
 //! Coding Addict -- { :YouTube }
 //! reactjs.org, react.dev
 //! Install Quokka.js
+//! Section 3: React Fundamentals
 // Vite -- Next Generation Frontend Tooling { better create-react-app }
 // npm create vite@latest react-dev -- --template react
 // npm install && npm run dev
@@ -239,23 +240,6 @@ console.log(anna[0].position); // filter
 // rd / s / q.git;
 // git init;
 
-/*
-…or create a new repository on the command line
-echo "# temp-backroads-app" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/walherb/temp-backroads-app.git
-git push -u origin main
-
-@used
-…or push an existing repository from the command line
-git remote add origin https://github.com/walherb/temp-backroads-app.git
-git branch -M main
-git push -u origin main
-*/
-
 //! Project Deployment --
 /*
 @used
@@ -294,6 +278,7 @@ git push -u origin main
 !CSS
 Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
 Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
+
 
 
 */

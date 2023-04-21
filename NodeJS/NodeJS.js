@@ -5,20 +5,22 @@ const http = require('http');
 const hostname = '0.0.0.0'; // listen on all ports
 const port = 1337;
 
-http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end("Hello World\n");
-}).listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World\n');
+  })
+  .listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+  });
 
-node /opt/nodeserver/server.js
-Create /etc/systemd/system/nodeserver.service
+node / opt / nodeserver / server.js;
+Create / etc / systemd / system / nodeserver.service;
 /*
 [Unit]
 Description=Node.js Example Server
 #Requires=After=mysql.service       # Requires the mysql service to run first
-
+#After=network.target
 [Service]
 ExecStart=/usr/local/bin/node /opt/nodeserver/server.js
 # Required on some systems
@@ -43,9 +45,14 @@ sudo systemctl status nodeserver.service
 sudo systemctl daemon-reload
 sudo systemctl restart nodeserver.service
 sudo systemctl status nodeserver.service
+
+Run systemctl daemon-reload to reload systemd configuration.
+Run systemctl start your-service-name.service to start the service.
+Run systemctl enable your-service-name.service to enable the service to start on boot.
+With this configuration, nodemon will automatically restart the Node.js app when changes are detected in the code.
+
+
 */
-
-
 
 // https://medium.com/bb-tutorials-and-thoughts/how-to-write-production-ready-node-js-rest-api-javascript-version-db64d3941106
 

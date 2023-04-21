@@ -11,7 +11,6 @@ must be jsx
 instead of index.js, need to use main.jsx 
 dist folder created instead of build folder when u build 
 
-
 !-------------------------------------------------------------------
 <div>
   {isLoggedIn ? (<AdminPanel />) : (<LoginForm />)}
@@ -36,7 +35,6 @@ const listItems = products.map((product) => {
 return (
   <ul>{listItems}</ul>
 );
-
 
 !https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-pern-stack-4fc18a1e5937
 !PERN Stack Course - Postgres, Express, React, and Node
@@ -519,7 +517,6 @@ let name = age > 10 ? "Pedro" : "Jack";       // Tenary operator
 const Component = () => {
   return age > 10 ? <div> Pedro </div> : <div> Jack </div>
 };
-
 
 !Objects
 const person = {
@@ -1119,6 +1116,7 @@ export default function App() {
 */
 
 /*
+! -------------- Pedro Tech --> YouTube ------------------------------ 
 !-------------- ReactJS Course[1] - What is React - How to setup a React App -----------------
 functrion App() {
   return (
