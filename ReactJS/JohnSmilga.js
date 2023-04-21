@@ -257,7 +257,7 @@ git clone https://github.com/walherb/temp-backroads-app.git
 npm install && npm start
 commit && push on VS Code
 
-VITE
+!VITE
 npm create vite@latest my-react-app -- --template react
 npm install && npm run dev
 
