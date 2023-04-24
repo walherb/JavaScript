@@ -1,4 +1,5 @@
 /*
+!Pedro Henrique Machado
 ! https://react.dev/learn
 !5 Pro-Level React Do's & Don'ts
 !How to use ChatGPT To Write Better React Code
@@ -26,16 +27,8 @@ cyclic.sh  --> { https://overalls-seagull.cyclic.app } /api/products
   npx create-react-app . 
 ! 00:18:14 |  Module 2: JSX, Components, Props
 00:38:02 |  Module 3: Ternary Operators, Lists and CSS
-const planets = [
-  { name: "Mars", isGasPlanet: false },
-  { name: "Earth", isGasPlanet: false },
-  { name: "Jupiter", isGasPlanet: true },
-  { name: "Venus", isGasPlanet: false },
-  { name: "Neptune", isGasPlanet: true },
-  { name: "Uranus", isGasPlanet: true },
-];
 01:04:33 |  Module 4: States in React, useState Hook
-!Stopped @ 35:26 mins
+!Stopped @Video:4 35:26 mins
 01:30:39 |  Module 5: CRUD in React, ToDo List
 02:10:08 |  Module 6: Component Lifecycle, useEffect Hook
 02:28:16 |  Module 7: Fetching Data from API's 
@@ -50,4 +43,36 @@ const planets = [
 06:05:40 |  Module 16: Firebase Project (Part 2)
 06:46:08 |  Module 17: Firebase Project (Part 3)
 07:41:58 |  Module 18: Deploying a Firebase React App
+*/
+
+/*
+! -------------- Pedro Tech --> YouTube ------------------------------ 
+!----------- ReactJS Course[1] - What is React - How to setup a React App -----------------
+function App() {
+  return (
+    <div className="App">
+      <User name="Pedro" age={21} email="pedro@pedro.com" />
+    </div>
+  );
+};
+
+const GetName = () => {
+  return "Pedro";
+};
+
+const GetNameComponent = () => {
+  return <h1>Pedro</h1>;
+};
+
+const User = (props) => {
+  return (
+    <div>
+      <h1> {props.name}</h1>
+      <h1> {props.age}</h1>
+      <h1> {props.email}</h1>
+    </div>
+  );
+};
+import { useState } from 'react';
+const [age, setAge] = useState(0);
 */

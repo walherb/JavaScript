@@ -502,7 +502,7 @@ import { Person } from './person';
 import Teacher, { promote } from "./teacher"
 import React, { Component } from "react"
 
-!---------------------------- All The JavaScript You To Need To Know For React -----------------------
+!----------------- All The JavaScript You To Need To Know For React -----------------------
 !--- Working with functions in General
 function DoSomething() {}
 const DoSomething = () => {}
@@ -551,7 +551,7 @@ names.filter((name) => {
 
 !Async + Await + Fetch
 
-!---------------------- ReactJS Course on PedroTech YouTube Channel -------------------------------
+!-------------- ReactJS Course on PedroTech YouTube Channel -------------------------------
 REACT STATES
 CRUD IN REACT
 REACT LIFECYCLE + USE EFFECT
@@ -1113,36 +1113,4 @@ const PRODUCTS = [
 export default function App() {
   return <FilterableProductTable products={PRODUCTS} />;
 }
-*/
-
-/*
-! -------------- Pedro Tech --> YouTube ------------------------------ 
-!-------------- ReactJS Course[1] - What is React - How to setup a React App -----------------
-functrion App() {
-  return (
-    <div className="App">
-      <User name="Pedro" age={21} email="pedro@pedro.com" />
-    </div>
-  );
-};
-
-const GetName = () => {
-  retrun "Pedro";
-};
-
-const GetNameComponent = () => {
-  return <h1>Pedro</h1>;
-};
-
-const User = (props) => {
-  return (
-    <div>
-      <h1> {props.name}</h1>
-      <h1> {props.age}</h1>
-      <h1> {props.email}</h1>
-    </div>
-  );
-};
-import { useState } from 'react';
-const [age, setAge] = useState(0);
 */
