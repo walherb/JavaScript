@@ -1,7 +1,33 @@
 /*
+!Web Dev Simplified --> { YouTube: Kyle Cook }
+!https://mui.com/material-ui/material-icons/?query=pix
 !"files.associations": {
     "*.js": "javascriptreact"
 }
+
+!Default Props 
+AddItem.defaultProps = {
+  number: 2,
+  text: "default",
+};
+
+AddItem.propTypes = {
+  number: PropTypes.number,
+  text: PropTypes.string,
+};
+
+import { PropTypes } from 'prop-types';
+
+pip install --upgrade or -U 
+!https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
+pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
+pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
+pip3 list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1 | xargs -n1 pip3 install -U 
+pip freeze > requirements.txt
+pip install -r requirements.txt --upgrade
+pip install --upgrade pip
+pip uninstall --yes <package-name>
+pip check
 
 ! https://react.dev/learn
 Vite -- Next Generation Frontend Tooling { better create-react-app }
@@ -35,53 +61,6 @@ const listItems = products.map((product) => {
 return (
   <ul>{listItems}</ul>
 );
-
-!https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-pern-stack-4fc18a1e5937
-!PERN Stack Course - Postgres, Express, React, and Node
-00:00 Intro
-04:11 PERN Stack Intro
-07:58 Postgres Windows Install
-16:35 Postgres Mac install
-29:13 Postgres Documentation
-30:29 PSQL Basics
-37:04 SQL Tables
-38:53 Create Table
-45:55 Modify Tables
-48:28 Delete Databases
-50:58 Yelp Project Database
-01:09:57 Node Setup
-01:12:45 Express Setup
-01:15:57 Environment Variables
-01:19:40 First Express Route
-01:29:27 Restful API Convention
-01:32:33 Configure all routes
-01:42:34 Express Middleware
-01:54:13 Finishing Up Routes
-02:03:10 Connect Express and Postgres
-02:14:20 Get all Restaurants Route
-2:18:25 Gone one Restaurant Route
-02:28:23 Create a Restaurant Route
-02:35:28 Update A Restaurant Route
-02:43:07 Delete A Restaurant Route
-02:46:28 React Setup
-02:52:52 React Router Setup
-03:02:03 HomePage Layout
-03:14:24 React Context API
-03:20:17 Fetching Data
-03:36:12 Rendering Restaurants
-03:41:48 Adding Restaurants
-03:56:26 Deleting Restaurants
-04:03:05 Updating Restaurants
-04:26:18 Detail Page
-04:38:06 Reviews Intro
-04:39:46 Reviews Postgres Table
-04:55:20 Star Rating Component
-05:02:49 Reviews Component Layout
-05:08:18 Add Review
-05:29:06 Add Review Express Route
-05:37:43 Add Review React Component
-05:48:04 Postgres Aggregate Functions
-05:57:26 SQL Joins and Wrapping up App
 
 !Jonathan Wexler - Get Programming with Node.js-Manning Publications (2019).pdf
 !{libgen.is, singlelogin.me}
@@ -229,14 +208,8 @@ Build a Movie-Search App Using React (With Hooks)
 
 npm init react-app navbar-tut
 
-Alt+Click -- Multiple Cursor
-Ctrl+Shift+Left -- Left Highlight
-Ctrl+shift+Down
-
 Build a COMPLETE React Admin Dashboard App | React, Material UI, Data Grid, Light & Dark Mode
-Pinned by EdRoh
-EdRoh
-2 months ago (edited)
+Pinned by EdRoh EdRoh 2 months ago (edited)
 Hey all! It seems that react-pro-sidebar got updated recently so at 5:41 instead of installing "react-pro-sidebar" please install "react-pro-sidebar@0.7.1" or else it'll break!
 
 0:00 Demonstration of a Complete React Admin Dashboard
@@ -257,9 +230,6 @@ Hey all! It seems that react-pro-sidebar got updated recently so at 5:41 instead
 4:03:05 Final Demo of Dashboard
 4:03:25 Fully Built Complete React Admin Dashboard
 
-Ctrl+Shift+P 				-> Open Command Palette
-Ctrl+P 						-> Search 4 Files
-
 9. Stripe (****.5)
 
 *(Not Mentioned)
@@ -270,12 +240,7 @@ Ctrl+P 						-> Search 4 Files
 Water 2 Drink = Weight * 2/3 {(17.6 Cups, 4.16 Liters)}
 Pounds/Ounces 141 Ounces
 
-code .
 !code -g commands.cfg:10
-Terminal
-Ctrl+`
-Ctrl+Shift+`
-Ctrl+Shift+P (View: Toggle Terminal)
 !git config --global core.editor "code --wait"
 !git commit or git -config --global -e
 
@@ -389,7 +354,7 @@ npx create-react-app@latest your-app-name
 sudo npm install -g npm-check-updates
 ncu -u
 
--------------------------- ES6 Tutorial - Learn Modern JavaScript in 1 Hour -------------------------
+--------------- ES6 Tutorial - Learn Modern JavaScript in 1 Hour -------------------------
 const -> block
 let -> block
 var -> function
@@ -639,7 +604,7 @@ class SomeClassComponents React.Component<Props> {
 }
 const SomeFunctionComponent: React.FunctionComponent<Props> = props => <div>{props.children}</div> */
 
-// ----------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------
 /* App.js */
 /*
 function MyButton() {
@@ -654,7 +619,7 @@ export default function MyApp() {
       </div>
   );
 }
----------------------------------------------
+--------------------------------------------------------------------------------------------
 function AboutPage() {
   return (
     <>
@@ -667,14 +632,14 @@ function AboutPage() {
       </>
   );
 }
------------------------------------------------------
+--------------------------------------------------------------------------------------------
 <img className="avatar" />;
 /* In your CSS */
 // .avatar {
 //   border-radius: 50%;
 // }
 // you'll add a <link> tag to your HTML
-// ---------------- Displaying Data --------------------
+// ------------------------------ Displaying Data ------------------------------------------
 // return (
 //   <h1>
 //     {user.name}
@@ -707,7 +672,7 @@ function AboutPage() {
     </>
   );
 }
---------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 {/* <div>
   {isLoggedIn ? (
     <AdminPanel />
@@ -719,7 +684,7 @@ function AboutPage() {
 <div>
 {isLoggedIn && <AdminPanel /> }
 </div>
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 const products = [
   { title: 'Cabbage', isFruit: false, id: 1 },
   { title: 'Garlic', isFruit: false, id: 2 },
@@ -742,7 +707,7 @@ export default function ShoopingList() {
     <ul>{listItems}</ul>
     );
   }
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 Updating the screen
 import { useState } from 'react';
 function MyButton() {
@@ -775,7 +740,7 @@ function MyButton() {
     </button>
     );
   }
-  ----------------------------------------------------------------------------
+  ------------------------------------------------------------------------------------------
 !To implement a UI in React, you will usually follow the same five steps.
 !Step 1: Break the UI into a component hierarchy
 !Step 2: Build a static version in React
@@ -1113,4 +1078,145 @@ const PRODUCTS = [
 export default function App() {
   return <FilterableProductTable products={PRODUCTS} />;
 }
+*/
+
+//!-----------------------------------------------------------------------------------------
+//! Site Relaibility Engineer --> Docker, Kubernetes --> truecaller
+/* 
+!J:\Courses\[GigaCourse.Com] Udemy - React - The Complete Guide (incl Hooks, React Router, Redux)
+
+Single-Page-Applications (SPAs)
+
+!Basics & Foundation (Introducing Key Features)
+- Components & Building UIs
+- Working with Events & Data: "props" and "state"
+- Styling React Apps & Components
+- Introduction into "React Hooks"
+
+!Advanced Concepts (Building for Production)
+- Side Effects, "Refs" & More React Hooks
+- React's Context API & Redux
+- Forms, Http Requests & "Custom Hooks"
+- Routing, Deployment, NextJS & More
+
+!Summaries & Refreshers (Optimizing your Time)
+- JavaScript Refresher
+- ReactJS Summary
+
+!https://jsbin.com  --> {Online JavaScriot Reprl}
+class Person {
+  constructor() {
+    this.name = 'Max';
+  }
+
+  printMyName() {
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printMyName();
+!------------------------------------------------------------------------------------------
+class Human {
+  constructor() {
+    this.gender = 'male';
+  }
+
+  printGender() {
+    console.log(this.gender);
+  }
+}
+
+class Person extends Human {
+  super();
+  constructor() {
+    this.name = 'Max';
+    this.gender = 'Female';
+  }
+
+  printMyName() {
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printName();
+person.printGender();
+
+!---------------------------------------- ES7 --------------------------------------------
+class Human {
+  gender = 'male';
+
+  printGender() {
+    console.log(this.gender);
+  }
+}
+
+class Person extends Human {
+  name = 'Max';
+  gender = 'Female';
+
+  printMyName = () => {
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printName();
+person.printGender();
+
+
+!------------------------ Spread & Rest Operator  ----------------------------------------
+- Spread
+const newArray = [...oldArray, 1, 2]
+const newObject = {...oldObject, newProp:5}
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4];
+const person = {
+  name: 'Max'
+};
+
+const newPerson = {
+  ...person,
+  age: 28
+}
+
+- Rest
+function sortArgs(..args) {
+  return args.sort()
+}
+conster filterArray = (...args) => {
+  return args.filter(el => el === 1);
+}
+
+const.log(filterArray(1, 2, 3));
+
+X = P [ ( 1 + i ) n - 1 ]
+where P is the principal, i is the nominal interest expressed as a decimal, and n is the number of periods the interest will be compounded.
+
+P = C (1 + r/n)nt
+where ‘C’ is the initial deposit, ‘r’ is the interest rate, ‘n’ is how frequently interest is paid, ‘t’ is how many years the money is invested and ‘P’ is the final value of your savings
+
+Principal --> P
+Annual Rate --> R
+Compound (n) --> Monthly
+Time (t in years)
+
+Using the formula A = P(1 + r/n)^nt
+Calculate Total P + I(A)
+
+public class JavaExample {
+
+    public void calculate(int p, int t, double r, int n) {
+        double amount = p * Math.pow(1 + (r / n), n * t);
+        double cinterest = amount - p;
+        System.out.println("Compound Interest after " + t + " years: "+cinterest);
+        System.out.println("Amount after " + t + " years: "+amount);
+    }
+    public static void main(String args[]) {
+    	JavaExample obj = new JavaExample();
+    	obj.calculate(2000, 5, .08, 12);
+    }
+}
+
 */
