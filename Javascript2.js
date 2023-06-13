@@ -1,20 +1,7 @@
-JAVASCRIPT
-developer.mozilla.org/en-US/
-developer.yahoo.com/javascript/performance
-stackoverflow.com
-"use strict";  -- strict mode
-**************** Javascript Frameworks *************
-Script.aculo.us
-JQuery
-Dojo Toolkit
-Sencha Ext JS 4 Framework -- Sencha.io
-Prototype
-DHTMLX Touch
+// "use strict";  -- strict mode
 
-DOM
 document.getElementById("id_name");
 document.getElementByTagName("a");
-
 
 var mainTitile = document.getElementById("mainTitile");
 console.log("This is an element of type: ", mainTitle.nodeType );
@@ -28,14 +15,10 @@ var myListItems = document.getElementByTagName("li");
 var myFirstList = document.getElementByID("abc");
 var limitedlist = myFirstList.getElementByTagName("li");
 
-element nodes
-attribute nodes
-text nodes
-
 var mainContent = document.getElementById("mainContent");
 mainContent.setAttribute("align", "right");
 
-mainTitile = document.getElementById("mainTitle");
+mainTitle = document.getElementById("mainTitle");
 console.log(mainTitle.innerHTML);
 
 var sidebar = document.getElementById("sidebar");
@@ -44,23 +27,19 @@ console.log(sidebar.innerHTML);
 var myNewElement = document.createElement("li");
 myElement.appendChild(myNewElement);
 var myText = document.createTextNode("New list item text");
-myNewElemt.appendChild(myText);
+myNewElement.appendChild(myText);
 
 parent.insertBefore(newElement, existingElement)
 
 myElement.onClick = function() {
   // your event handler code
-
-
 };
 
 document.addEventListener('click', myFunction, false);
 // internet exp 8 and previous
 document.attachEvent('onclick', myFunction);
 
-
 // when javascript is loaded initially at the beginning of the page 
-
 
 function prepareEventHandlers() {
 	 var myImage = document.getElementById("mainImage");
@@ -78,18 +57,11 @@ console.error
 console.debug
 console.warn
 console.info
-// comments in javascript
-/* jdjdjd
-dmdmdd
-nddmdmd
-mdmdmd
-*/
 
-ARRAYS
 var values = [10,20,30,40,50];
 console.log(food.length);
 
-var reversed = values.reverse(); || join() || sort()
+// var reversed = values.reverse(); || join() || sort()
 
 var myArrayOfLinks = document.getElementByTagName("a");
 
@@ -115,15 +87,14 @@ if (phrase.indexOf("DDDD") == -1) {
 
 var segment = phrase.slice(6,5);
 
-REFERENCE
-http://developer.mozilla.org/en/JavaScript/Reference
+// REFERENCE http://developer.mozilla.org/en/JavaScript/Reference
 
 
-DATE (get and set)
+// DATE (get and set)
 var today = new Date();
 var y2k = new(2000,0,1,0,0,0);
 
-today.getMonth(); 0-11 month is 0 based 2 -- means march
+today.getMonth(); // 0-11 month is 0 based 2 -- means march
 today.getFullYear(); // YYY not zero-based
 today.getDate(); // 1-31
 today.getDay(); // 0-6  0 == sunday
@@ -169,22 +140,13 @@ alert(highScore); -- 600
 
 Number("5") == 5
 
-prompt("");
-confirm("Hey watsup", "");
-
-fucntion square(X) {
-	return x*x;
-}
-
 square(12);
 
 
 function power(base, exponent) {
 var result = 1;
 for (var count = 0; count < exponent; count++)
-result
-*
-= base;
+result *= base;
 return result;
 }
 power(2, 10);
@@ -236,12 +198,9 @@ var email = ARCHIVE[i];
 // Do something with this email...
 }
 
-
 var mailArchive = ["mail one", "mail two", "mail three"];
 for (var current = 0; current < mailArchive.length; current++)
 print("Processing email #", current, ": ", mailArchive[current]);
-
-isNaN
 
 if (true == false)
 print("How confusing!");
@@ -288,7 +247,7 @@ result;
 
 2^10
 
-This program finds the first number that is greater than 20 and divisible by 7:
+// This program finds the first number that is greater than 20 and divisible by 7:
 for (var current = 20; ; current++) {
 if (current % 7 == 0)
 break;
@@ -309,26 +268,18 @@ print("Unknown weather type!");
 break;
 }
 
-
 if (variable == "value1") action1();
 else if (variable == "value2") action2();
 else if (variable == "value3") action3();
 else defaultAction();
 
-keywords
+/* keywords
 abstract boolean break byte case catch char class const continue debugger
 default delete do double else enum export extends false final finally float
 for function goto if implements import in instanceof int interface long native
 new null package private protected public return short static super switch
 synchronized this throw throws transient true try typeof var void volatile
-while with
-
-var x = 23;
-document.write(x);
-numbers
-strings "text"
-true or false
-null
+while with */
 
 var name = "Bucky";
 var age = 24;
@@ -340,19 +291,13 @@ function funcky() {
 	alert("Ouch wat da Fuck");
 }
 
-funcky();
-
-
-<form>
-<input type="button" value="touch me" onclick="funcky">
-</form>
+{/* <form><input type="button" value="touch me" onclick="funcky"></form> */}
 
 function meatball(x) {
 	alert("i love " + x);
 }
 
-meatball("bacon"); == i love bacon
-
+meatball("bacon"); // == i love bacon
 
 function apples(one, two) {
 	document.write(one + " is better than " + two + "<br />");
@@ -380,8 +325,6 @@ function start() {
 
 start();
 
-Global n Local Variables
-
 var girl = " kelsy ";
 
 function spit() {
@@ -395,18 +338,13 @@ document.write(girl);
 document.write(boy);
 
 chop = 67;
-
-chop++;  === 68
-chop--   === 66
+// chop++;  === 68
+// chop--   === 66
 
 var bucky = 24;
 
-]}bucky +(/*%-)= 54;
-
 var apples = 34;
 var hotdogs = 53;
-
-!= <= == >=
 
 if(apples==hotdogs) {
 	document.write("Yah it worked! ");
@@ -445,9 +383,6 @@ if(firstName==bucky) {
 	document.write("I love strawberry");
 }
 
-COMPLEX CONDITIONS
-
-
 if( (first=="bucky") && (last=="roberts") ) {
 	document.write("Hey good job bucky");
 }
@@ -455,8 +390,6 @@ if( (first=="bucky") && (last=="roberts") ) {
 if( (first=="bucky") || (last=="roberts") ) {
 	document.write("Hey good job bucky");
 }
-
-SWITCH STATEMENT
 
 var girl = "natalie";
 
@@ -471,8 +404,9 @@ switch(girl) {
 		document.write("this is the default");
 }
 
-LOOPS
-for(x=0;x<10;x++) x+=3 {
+// LOOPS
+for(x=0;x<10;x++) {
+	x+=3
 	document.write("hey watsup <br />");
 }
 
@@ -483,8 +417,6 @@ while(x<10) {
 	x++;
 }
 
-DO WHILE
-
 var x =5;
 
 do{
@@ -492,26 +424,19 @@ do{
 	x++;
 }while(x<=20);
 
-EVENT HANDLERS
-
-<form>
+// EVENT HANDLERS
+{/* <form>
 	<input type="button" value="touch me" onClick="alert('ahh!');alert('eh eh!');"/>
 </form>
 
 <a href="http://wat.co.ug" onMouseOver="alert('Gametime');"> Linking </a>  // onMouseOut
 
 <body onLoad="alert('Your website has loaded');">
-</body> // onUnload
+</body> // onUnload */}
 
-***********OBJECTS (properties and methods)*********
-
-var tuna = "Hey i am tuna fish";
-tuna.length  -- length is a property
-
+// ***********OBJECTS (properties and methods)*********
 document.write("Hey wats up");
 object.method();
-
-Creating Own Objects
 
 function person(name, age){
 	this.name = name;
@@ -521,20 +446,15 @@ function person(name, age){
 var bucky = new person("Bucky Roberts", 24);
 var taylor = new person("Taylor Swift", 20);
 
-
 document.write(bucky.name);
 
-*************OBJECT INITIALIZERS**********
+// *************OBJECT INITIALIZERS**********
 bucky = {name:"Bucky Roberts", age:24};
 taylor = {name:"Taylor Swift", age:20};
 
-
 document.write(bucky.name + " Loves " + taylor.name + " Because she is " + taylor.age);
 
-
-******* Adding Methods to Objects *********
-
-
+// ******* Adding Methods to Objects *********
 function person(name, age){
 	this.name = name;
 	this.age = age;
@@ -546,22 +466,16 @@ function yearsLeft() {
 	return numYears;
 }
 
-
 var natalie = new people("Natalie Portman", 28);
-
 document.write(natalie.yearsUntilRetire());
 
-
-******** ARRAYS *******
+// ******** ARRAYS *******
 
 var people = new Array("Bucky", "Tommy", "Sarah", "Hanah");
-
 document.write(people[2]);  -- Sarah
 
-Creating Arrays
-
+// Creating Arrays
 var things = new Array(3);
-
 things[0] = "jersey shore"
 things[1] = "brian regan"
 things[2] = "thenewboston"
@@ -575,52 +489,49 @@ document.write(dudes.length);
 
 var people = dudes.concat(chicks);
 
-var string1 = dudes.join(" - ")|| (); -- convert array to strings
+var string1 = dudes.join(" - ")	// || (); // -- convert array to strings
 document.write(string1);
 
 document.write(dudes[2] + "<br />");
-dudes.pop(); -- deletes last element
+dudes.pop(); //-- deletes last element
 
 
-********reverse push sort **********
+// ********reverse push sort **********
 dudes.reverse();
 dudes.push("herbert");
 dudes.sort();
 
-***************Input Text Prompt*********
+// ***************Input Text Prompt*********
 var pie = prompt("Enter your name:", "");
 document.write("Hello" + pie);
 
-***Add Elements using for loop ***
-var crap - ne Array(3);
-
+// ***Add Elements using for loop ***
 for(i=0;i<3;i++){
 	crap[i] = prompt("Add something to the ARRAY", "");
 }
 
-***** Print Arrays *****
+// ***** Print Arrays *****
 stuff.sort();
 for(i=0;i<stuff.length;i++){
 	document.write(stuff[i] + <br />);
 }
 
-****** Associative Array ******
-
+// ****** Associative Array ******
 var bucky = new Array();
 bucky["color"] = "blue";
-bucky["food"] = "hot pockets;
+bucky["food"] = "hot pockets";
 bucky["name"] = "Bucky roberts";
 
 document.write("bucky's favprite food is " + bucky["food"]);
 
-*********** MATH OBJECTS ************
-document.write(Math.PI); | E 
+// *********** MATH OBJECTS ************
+document.write(Math.PI); // | E 
 
 var n = prompt("Enter a number:", "");
 var answer = Math.sqrt(n);
-alert("The square root of " + n " is " + answer);
+// alert("The square root of " + n " is " + answer);
 
-*********** Date Object **********
+// *********** Date Object **********
 function doSomething() {
 	document.write("Tuna");
 }
@@ -637,7 +548,7 @@ function printTime(){
 
 setInterval("printTime()", 1000);
 
-***************Accessing Forms ******************
+// ***************Accessing Forms ******************
 
 var x = document.forms[0].length;
 document.write(x);
@@ -654,11 +565,9 @@ document.write(x);
 var x = document.forms[0].elements[0].name;
 document.write(x);
 
-|||||
-
 var x = document.walas.username.name;
 
-Simple Form Validation
+// Simple Form Validation
 
 function validator(){
 	if(document.walas.thebox.checked)
@@ -667,7 +576,7 @@ function validator(){
 		alert("No its not checked");
 }
 
-Javascript is an Event Driven Language
+/* Javascript is an Event Driven Language
 As you can tell from the input examples, Javascript is an event driven language which means
 your scripts react to events you set up. Your code isn't runningall the time, it simply waits until
 an event starts something up! Going into all the Javascript events is beyond the scope of this
@@ -695,35 +604,35 @@ onResize The window or frame was resized.
 onSelect Text has been selected.
 onSubmit A form's Submit button has been pressed.
 onUnload The user is navigatingawayfrom a page.
-
+ */
 var userName = 'Bob';
 var hello = (userName=='Bob') ? 'Hello Bob!' : 'Hello Not Bob!'; 
-var someVariable = (condition to test) ? (condition true) : (condition false);
+// var someVariable = (condition to test) ? (condition true) : (condition false);
 
-The question mark (?) and colon (:) tend to get lost incomplex expressions as you can see in this
-example taken from wikipedia (but whichwill also work in Javascript ifthe various variables are
-assigned...) 
+// The question mark (?) and colon (:) tend to get lost incomplex expressions as you can see in this
+// example taken from wikipedia (but whichwill also work in Javascript ifthe various variables are
+// assigned...) 
 
 for (i = 0; i < MAX_PATTERNS; i++)
 c_patterns[i].ShowWindow(m_data.fOn[i] ? SW_SHOW : SW_HIDE);
 
-
+/* 
 This is actually an extreme simplification of what a for statement can do. On the other end of the
 spectrum, consider this shuffle prototype whichwill randomly shuffle the contents of an array.
 Here, everythingis defined, and executed withinthe context of the for statement itself, needing
 no additional block to handle the code. 
 Array.prototype.shuffle = function (){ 
 for(var rnd, tmp, i=this.length; i; rnd=parseInt(Math.random()*i), tmp=this[--i], this[i]=this[rnd], this[rnd]=tmp);
-};
+}; */
 
-Loops: FOR/IN
+/* Loops: FOR/IN
 Javascript has a variant of the for loop when dealing with Javascript objects. 
-Consider the following object… 
+Consider the following objectï¿½  */
 var myObject = { 'animal'  : 'dog',
 'growls'  : true,
 'hasFleas': true,
 'loyal'  : true }                
-We can loop through these values with the followingconstruct. 
+// We can loop through these values with the followingconstruct. 
 var myObject = { 'animal'  : 'dog',
 'growls'  : true,
 'hasFleas': true,
@@ -737,26 +646,24 @@ document.writeln(property + ' contains ' + myObject[property]+'<br>');
 // hasFleas contains true
 // loyal contains true
 
-
-
-What this essentiallydoes is assignthe propertyname to the variable property. We can then
+/* What this essentiallydoes is assignthe propertyname to the variable property. We can then
 access myObjectthrough an associativearray style syntax. For instance the first itteration of the
 loop assigns animal to propertyand myObject["animal"] will return dog. 
 There is a big caveat here in that properties and methods added by prototypingwill also show
 up inthese types of loops. Therefore it's best to always check to make sure you are dealingwith
-data and not a function as such… 
+data and not a function as suchï¿½  */
 for (var property in myObject) {
 if (typeof(myObject[property]) != 'function') {
 document.writeln(property + ' contains ' + myObject[property]+'<br>');
 }
 }                                 
-The typeof check to screen out functions will ensure that your for/inloops will extract only data
+/* The typeof check to screen out functions will ensure that your for/inloops will extract only data
 and not methods that maybe added by popular javascript libraries like Prototype. 
 
 Loops: WHILE
 while loops inJavascript also follow basic C syntax and are easy to understand and use. 
 The whileloop will continue to execute until its test condition evaluates to false or the loop
-encounters a breakstatement. 
+encounters a breakstatement.  */
 var x = 1;
 while (x<5) {
 x = x +1;
@@ -768,8 +675,8 @@ if (x>=5) {
 break;
 }
 }
-Sometimes it makes more sense to evaluate the test condition at the end of the loop instead of
-the beginning.So for this Javascript supports a do/whilestructure. 
+// Sometimes it makes more sense to evaluate the test condition at the end of the loop instead of
+// the beginning.So for this Javascript supports a do/whilestructure. 
 var x=1;
 do {
 x = x + 1;
@@ -778,7 +685,7 @@ x = x + 1;
 // default text reappars in the textbox after tab out
 var emailField = document.getElementByID("email");
 
-emailField.onFocus = function() {
+/* emailField.onFocus = function() {
 	if (emilField.value == "your email") {
 		emailField.value = "";
 	}
@@ -790,8 +697,8 @@ emailField.onblur = function() {
 	}
 }
 
-setTimeout(function, 5000); after 5s
-setInterval(function, 3000);
+setTimeout(function, 5000); //after 5s
+setInterval(function, 3000); */
 
 var myImage = document.getElementById("mainImage");
 
@@ -821,8 +728,7 @@ function calculateSum(a,b,c) {
 
 var result = calculateSum();
 
-FORMS
-
+/* FORMS
 TEXTFIELDS
 text.value property
 //main events
@@ -859,21 +765,21 @@ bg-color -- bgColor
 class  ---  .className = ....
 
 
-javascript style guidelines
+javascript style guidelines */
 
-*****************MINIFICATION TOOLS
-JSMin
-YUI Compressor
-Google Closure Compiler
+// *****************MINIFICATION TOOLS
+// JSMin
+// YUI Compressor
+// Google Closure Compiler
 
 http://closure-compiler.appsort.com/home
 
-****************QUALITY CHECK
-JSLint  -- at JSLint.com
+// ****************QUALITY CHECK
+// JSLint  -- at JSLint.com
 
-LIBRARIES
-code.google.com/apis/libraries
-***********jQuery and jQuery UI(accordion)
+// LIBRARIES
+// code.google.com/apis/libraries
+// ***********jQuery and jQuery UI(accordion)
 
 document.getElementById("myDiv").classNamem = "highlight";
 
@@ -884,7 +790,7 @@ jQuery("a")
 jQuery("li")
 jQuery("p.description")
 
-**********HTML5 FEATURES
+/* **********HTML5 FEATURES
 *************caniuse.com
 Video Support
 Audio Support
@@ -893,113 +799,90 @@ Offline storage
 New form elements
 Drag-and-Drop
 Geolocation 
-Local storage
-[
-document.getElementByClassName("");
+Local storage */
 
-HTML5 Video and Audio in Depth -- lynda.com tutorial
+// document.getElementByClassName("");
+
+// HTML5 Video and Audio in Depth -- lynda.com tutorial
 
 //setlocalstorage["username"] = name;
 
 //get
-var name = localstorage["username"];
+// var name = localstorage["username"];
 
-Offline Storage Web SQL IndexedDB
-HTML5: Local Storage and Offline Application in Depth -- lynda.com tutorial
+// Offline Storage Web SQL IndexedDB
+// HTML5: Local Storage and Offline Application in Depth -- lynda.com tutorial
 
-WEB WORKERS
-var worker = new Worker("anotherjsfile.js");
+// WEB WORKERS
+// var worker = new Worker("anotherjsfile.js");
 
 // get readdy to receive messages from worker
-worker.onmessage = function(e) {
+/* worker.onmessage = function(e) {
 	console.log("The worker called me");
-};
+}; */
 
 //send messages to the worker
-worker.postMessage("firstFunction");
+// worker.postMessage("firstFunction");
 
-******FEATURE DETECTION***
-********modernizr.com 
-if (document,getElementByClassName) {
-  // it exist, we can use it
-  //....
-} else {
-	// it doesn't exist on this browser
-}
+// ******FEATURE DETECTION***
+// ********modernizr.com 
+// if (document.getElementByClassName) {
+//   // it exist, we can use it
+//   //....
+// } else {
+// 	// it doesn't exist on this browser
+// }
 
-if (Modernizr.video) {
-	// yes -- use HTML5 video
-} else {
-	// perhaps replace with Flash video
-}
-]
+// if (Modernizr.video) {
+// 	// yes -- use HTML5 video
+// } else {
+// 	// perhaps replace with Flash video
+// }
 
-:first
+/* :first
 :last
 :contains
 :visible
 :first
+ */
+// jQuery("what to find").ssomeAction;
 
-jQuery("what to find").ssomeAction;
-
-.addClass().
+/* .addClass().
 .removeClass().
 .toggleClass().
 
-alias $ -> jQuery
+alias $ -> jQuery */
 
-EFFECTS
-$("p").hide(4000);  -- take 4s to hide all paragraphs
+// EFFECTS
+// $("p").hide(4000);  // -- take 4s to hide all paragraphs
 
-EVENTS
-
+/* EVENTS
 CONTENT DISTRIBUTION NETWORK(CDN)
+CREATE REGULAR EXPRESSIONS */
 
-CREATE REGULAR EXPRESSIONS
-
-var myRE = /hello/;
+// var myRE = /hello/;
 // or
-var myRE = new RegExp("hello");
+// var myRE = new RegExp("hello");
 
-var myString = "Does this sentence have the word hello in it?";
-if (myRE.test(myString)) {
-	alert("Yes");
-}
+// var myString = "Does this sentence have the word hello in it?";
+// if (myRE.test(myString)) {
+// 	alert("Yes");
+// }
 
-\w
-\b
+// awk & sed like expr
+// /^[]+@[]+\.[]{}$/
 
-awk & sed like expr
-/^[]+@[]+\.[]{}$/
-
-**************AJAX
-1. Create the request
-2. Deal with any response
-
-var myRequest = new XMLHttpRequest //!
-
- 
- CREATE THE REQUEST
- var myRequest;
-  // feature check!
-  if (window.XMLHttpRequest) {
-	myRequest = new XMLHttpRequest();
- } else if (window.ActiveXObject) {
-	myRequest = new ActiveXObject("Microsoft.XMLHTTP")
- }
- 
- PREPARE TO ACCEPT THE RESPONSE
- myRequest.onreadystatechange = function(){
-	console.log("We were called!");
-	// console.log(myRequest.readyState);
- };
+//  PREPARE TO ACCEPT THE RESPONSE
+//  myRequest.onreadystatechange = function(){
+// 	console.log("We were called!");
+// 	// console.log(myRequest.readyState);
+//  };
  
  // YHEN configure and send
- myRequest.open("GET", "http://mysite.com/somedata.php", true);
- myRequest.send(null);
+//  myRequest.open("GET", "http://mysite.com/somedata.php", true);
+//  myRequest.send(null);
  
- 
- OBJECTS AND CONSTRUCTORS(Objects Prototypes)
+//  OBJECTS AND CONSTRUCTORS(Objects Prototypes)
  
  function Player(n,s,r) {
 	this.name = n;
@@ -1007,34 +890,26 @@ var myRequest = new XMLHttpRequest //!
 	this.rank =r;
  }
  
- Player.prototype.logInfo = function () {
-	console.log("I am:", this.name);
- }
+//  Player.prototype.logInfo = function () {
+// 	console.log("I am:", this.name);
+//  }
  
- var fred = new Player("Fred");
+//  var fred = new Player("Fred");
  
- fred.logInfo();
+//  fred.logInfo();
  
- ***********JQUERY**********
- A Brief Look
-DOM Traversal and Manipulation
+// $( "button.continue" ).html( "Next Step..." )
 
-Get the <button> element with the class 'continue' and change its HTML to 'Next Step...'
+/* Event Handling
+Show the #banner-message element that is hidden with  display:none in its CSS when any button in #button-container is clicked. */
 
-$( "button.continue" ).html( "Next Step..." )
+// var hiddenBox = $( "#banner-message" );
+// $( "#button-container button" ).on( "click", function( event ) {
+//   hiddenBox.show();
+// });
 
-Event Handling
-Show the #banner-message element that is hidden with  display:none in its CSS when any button in #button-container is clicked.
-
-var hiddenBox = $( "#banner-message" );
-$( "#button-container button" ).on( "click", function( event ) {
-  hiddenBox.show();
-});
-
-
-Ajax
-Call a local script on the server /api/getWeather with the query parameter zipcode=97201 and replace the element #weather-temp's html with the returned text.
-
+/* Ajax
+Call a local script on the server /api/getWeather with the query parameter zipcode=97201 and replace the element #weather-temp's html with the returned text. */
 
 $.ajax({
   url: "/api/getWeather",

@@ -1,5 +1,5 @@
 // @ts-nocheck
-// // @ts-ignore
+// @ts-ignore
 // --------------- Skillshare - ES6 Fundamentals ----------------------
 // const drinks = ["cola", "tea", "water", "soda"];
 // const drinks = {
@@ -68,7 +68,7 @@
 
 // Object.freeze(ourObject);
 
-// // ourObject.animalOne = "cow";
+// ourObject.animalOne = "cow";
 // console.log(ourObject);
 
 //! Array Destructuring
@@ -272,7 +272,7 @@ console.log(hotDrinksPrices(drinks)); */
 // }
 
 // function printNumber(number, index) {
-//   // console.log(number, index);
+//   console.log(number, index);
 //   return (sum += number);
 // }
 // ourNumbers.forEach(printNumber);
@@ -427,9 +427,9 @@ console.log(hotDrinksPrices(drinks)); */
 //     score: 98,
 //   },
 // ];
-// // const winner = results.find(function (result) {
-// //   return result.score === 100;
-// // });
+// const winner = results.find(function (result) {
+//   return result.score === 100;
+// });
 // const winner = results.find((result) => result.score === 100);
 // console.log(winner.name);
 

@@ -1,8 +1,39 @@
 /*
 !Web Dev Simplified --> { YouTube: Kyle Cook }
+
+!Step 1: Break the UI into a component hierarchy
+!Step 2: Build a static version in React
+!Step 3: Find the minimal but complete representation of UI state 
+!Step 4: Identify where your state should live  
+!Step 5: Add inverse data flow 
+
+npx create-react-app my-app --template typescript
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+import PropTypes from 'prop-types';
+
+npm install --save-dev typescript #or yarn add --dev typescript
+
+“scripts”: {
+  “typecheck”: “tsc”
+}
+
+npx tsc --init #or yarn run tsc --init
+
+pip install --upgrade or -U 
+!https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
+pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
+pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
+pip3 list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1 | xargs -n1 pip3 install -U 
+pip freeze > requirements.txt
+pip install -r requirements.txt --upgrade
+pip install --upgrade pip
+pip uninstall --yes <package-name>
+pip check
+
 !https://mui.com/material-ui/material-icons/?query=pix
 !"files.associations": {
-    "*.js": "javascriptreact"
+  "*.js": "javascriptreact"
 }
 
 !Default Props 
@@ -18,18 +49,453 @@ AddItem.propTypes = {
 
 import { PropTypes } from 'prop-types';
 
-pip install --upgrade or -U 
-!https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
-pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
-pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
-pip3 list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1 | xargs -n1 pip3 install -U 
-pip freeze > requirements.txt
-pip install -r requirements.txt --upgrade
-pip install --upgrade pip
-pip uninstall --yes <package-name>
-pip check
+!Item.propTypes = {
+  item: PropTypes.shape({
+    objectID: PropTypes.number.isRequired,
+    url: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string,
+    num_comments: PropTypes.number,
+    points: PropTypes.number,
+  }).isRequired,
+};
 
-! https://react.dev/learn
+!-------------------------- Master PropTypes in React ------------------------------
+!https://blog.bitsrc.io/master-proptypes-in-react-a80f9fefff8
+npm install --save prop-types
+yarn add prop-types
+import { PropTypes } from 'prop-types';
+npm install prop-types --save
+import PropTypes from 'prop-types';
+
+MyComponent.propTypes = {}; 
+
+Component.propTypes = {
+  profileProp: PropTypes.shape({
+    id: PropTypes.number,
+    fullname: PropTypes.string,
+    gender: PropTypes.oneOf(['M', 'F']),
+    birthdate: PropTypes.instanceOf(Date),
+    isAuthor: PropTypes.bool
+  })
+}
+
+Component.propTypes = {
+  subjectScoreProp: PropTypes.exact({
+    subject: PropTypes.oneOf(['Maths', 'Arts', 'Science']),
+    score: PropTypes.number
+  })
+}
+
+Profile.propTypes = {
+    name: PropTypes.oneOf(['John', 'Jane']).isRequired,
+    ...
+};
+
+Profile.propTypes = {
+    ...
+    arrayOrObject: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+};
+
+Profile.propTypes = {
+    ...
+    myObject: PropTypes.objectOf(PropTypes.string).isRequired,
+}
+myObject: {
+    pet: 'cat',
+    food: 'pizza',
+},
+
+Component.propTypes = {  
+  profileProp: PropTypes.shape({  
+    id: PropTypes.number,  
+    fullname: PropTypes.string,  
+    gender: PropTypes.oneOf(['M', 'F']),  
+    birthdate: PropTypes.instanceOf(Date),  
+    isAuthor: PropTypes.bool  
+  })  
+}  
+
+Component.propTypes = {  
+  subjectScoreProp: PropTypes.exact({  
+    subject: PropTypes.oneOf(['Maths', 'Arts', 'Science']),  
+    score: PropTypes.number  
+  })  
+}  
+
+!Custom validators for type-checking React props.
+const isEmail = function(props, propName, componentName) {  
+  const regex = /^((([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,})))?$/;  
+    
+  if (!regex.test(props[propName])) {  
+    return new Error(`Invalid prop `${propName}` passed to `${componentName}`. Expected a valid email address.`);  
+  }  
+}  
+  
+Component.propTypes = {  
+  email: isEmail,  
+  fullname: PropTypes.string,  
+  date: PropTypes.instanceOf(Date)  
+} 
+
+const isEmail = function(propValue, key, componentName, location, propFullName) {
+  const regex = /^((([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,})))?$/;
+
+  if (!regex.test(propValue[key])) {
+    return new Error(`Invalid prop `${propFullName}` passed to `${componentName}`. Expected a valid email address.`);
+  }
+}
+
+Component.propTypes = {
+  emails: PropTypes.arrayOf(isEmail)
+}
+
+const isEmail = function(propValue, key, componentName, location, propFullName) {
+  // Get the resolved prop name based on the validator usage
+  const prop = (location && propFullName) ? propFullName : key;
+
+  const regex = /^((([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,})))?$/;
+
+  if (!regex.test(propValue[key])) {
+    return new Error(`Invalid prop `${prop}` passed to `${componentName}`. Expected a valid email address.`);
+  }
+}
+
+Component.propTypes = {
+  email: PropTypes.oneOfType([
+    isEmail,
+    PropTypes.shape({
+      address: isEmail
+    })
+  ]),
+  emails: PropTypes.arrayOf(isEmail)
+}
+
+!Validating PercentageStat in React 
+import React from 'react';
+import PropTypes from 'prop-types';
+
+The PercentageStat component
+function PercentageStat({ label, score = 0, total = Math.max(1, score) }) {
+  return (
+    <div>
+      <h6>{ label }</h6>
+      <span>{ Math.round(score / total * 100) }%</span>
+    </div>
+  )
+}
+
+Checks if a value is numeric
+Either a finite number or a numeric string
+function isNumeric(value) {
+  const regex = /^(\+|-)?((\d*\.?\d+)|(\d+\.?\d*))$/;
+  return Number.isFinite(value) || ((typeof value === "string") && regex.test(value));
+}
+
+
+Checks if value is non-zero
+Value is first converted to a number
+function isNonZero(value) {
+  return +value !== 0;
+}
+
+
+Takes test functions as arguments and returns a custom validation function.
+Each function passed in as argument is expected to take a value argument
+expected to accept a value and return a Boolean if it passes the validation.
+All tests must pass for the custom validator to be marked as passed.
+function validatedType(...validators) {
+  return function(props, propName, componentName) {
+
+    const value = props[propName];
+
+    const valid = validators.every(validator => {
+      if (typeof validator === "function") {
+        const result = validator(value);
+        return (typeof result === "boolean") && result;
+      }
+
+      return false;
+    });
+
+    if (!valid) {
+      return new Error(`Invalid prop \`${propName}\` passed to \`${componentName}\`. Validation failed.`);
+    }
+
+  }
+}
+
+// Set the propTypes for the component
+PercentageStat.propTypes = {
+  label: PropTypes.string.isRequired,
+  score: validatedType(isNumeric),
+  total: validatedType(isNumeric, isNonZero)
+}
+
+export const Profile = ({ name, age, isloggedIn }) => {
+    return (
+        <>
+            {isloggedIn && (
+                <p>
+                    {name} is {age + 3}
+                    years old
+                </p>
+            )}
+        </>
+    );
+};
+
+Profile.propTypes = {
+    name: PropTypes.string,
+    age: PropTypes.number,
+    isloggedIn: PropTypes.bool,
+};
+
+Profile.propTypes = {
+    userDetails: PropTypes.shape({
+        ...
+        email: function (props, propName, componentName) {
+            const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+            if (!regex.test(props[propName])) {
+                return new Error(
+                    `The prop ${propName} passed to ${componentName}is not a valid email address.`
+                );
+            }
+        },
+    }),
+};
+
+const isEmail = function (props, propName, componentName) {
+    const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    if (!regex.test(props[propName])) {
+        return new Error(
+            `The prop ${propName} passed to ${componentName}is not a valid email address.`
+        );
+    }
+};
+
+Profile.propTypes = {
+    userDetails: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        age: PropTypes.number,
+        email: isEmail,
+    }),
+};
+
+Profile.defaultProps = {
+    userDetails: {
+        id: 1,
+        name: 'John Doe',
+        age: 30,
+    },
+};
+
+-- Basic types
+PropTypes.any: The prop can be of any data type
+PropTypes.number: The prop should be a number
+PropTypes.string: The prop should be a string
+PropTypes.bool: The prop should be a boolean
+PropTypes.symbol: The prop should be a symbol
+PropTypes.func: The prop should be a function
+
+-- Collection types
+a. Array Types
+PropTypes.array: The prop should be an array
+PropTypes.arrayOf([type]): The prop should be an array where all values match the specified type
+ReactComponent.propTypes = {
+  arrayProp: PropTypes.array, // []
+  stringArrayProp: PropTypes.arrayOf(PropTypes.string), // ["A","B","C"]
+  numArrayProp: PropTypes.arrayOf(PropTypes.number) // [1,2,3]
+};
+
+b. Object Types
+PropTypes.object: The prop should be an object
+PropTypes.objectOf([type]):  The prop should be an object in which all property values match the specified type.
+PropTypes.shape: The prop should be an object which contains a set of specified keys with values of the specified types.
+PropTypes.exact: The prop should be an object which contains a set of specified keys which strictly matches with specified types.
+
+ReactComponent.propTypes = {
+  objectProp: PropTypes.object, // {}
+  
+  stringObjectProp: PropTypes.objectOf(PropTypes.string), // {name: "John", occupation: "Web Developer"}
+  numObjectProp: PropTypes.objectOf(PropTypes.number), // {age: 27}
+  
+  userObjectShapeProp: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    age:PropTypes.number,
+    occupation: PropTypes.string,
+  })
+  
+  userObjectExactProp: PropTypes.exact({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    age:PropTypes.number,
+    occupation: PropTypes.string,
+  })
+};
+
+-- Multiple types
+3) Multiple Types
+PropTypes.oneOf: The prop is limited to a specified set of values, treating it like an enum
+PropTypes.oneOfType: The prop should be one from of a specified set of types, behaving like a union of types
+
+ReactComponent.propTypes = {
+  enumProp: PropTypes.oneOf([true, 23, "N/A"]),
+  genderEnumProp: PropTypes.oneOf(["M","F"]),
+  
+  unionProp: PropTypes.oneOfType([
+    PropType.string,
+    PropType.array,
+    PropType.bool,
+    PropType.object,
+  ])
+};
+
+
+-- Instance types
+4) Instance Types
+PropTypes.instanceOf: The prop should be instance of the specific JS class
+ReactComponent.propTypes = {
+  userProp: PropTypes.instanceOf(User)
+};
+
+-- Required types
+5) Required Types
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  occupation: PropTypes.string.isRequired,
+};
+
+Renderable types
+Custom types
+
+class Student extends React.Component {
+  
+  render() {
+    return (
+      <div>
+        <p>Name: {this.props.name}</p>
+        <p>Age: {this.props.age}</p>
+      </div>
+    );
+  }
+}
+
+Student.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number
+};
+
+MyComponent.propTypes = {
+  propArray: PropTypes.array,
+  propBool: PropTypes.bool,
+  propFunc: PropTypes.func,
+  propNumber: PropTypes.number,
+  propObject: PropTypes.object,
+  propString: PropTypes.string,
+}
+
+PropTypes.any
+
+const Student = (props) => {
+  return (
+    <div>
+      <p>Student Name: {props.name}</p>
+      <p>Age: {props.age}</p>
+    </div>
+  );
+};
+Student.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number
+};
+
+Student.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number
+};
+
+class Numbers extends React.Component {
+  
+  render() {
+    const numbers = this.props.numbers.map(number => <p>{number}</p>);
+    return (
+      <div>
+        {numbers}
+      </div>
+    );
+  }
+}
+Numbers.propTypes = {
+  numbers: PropTypes.arrayOf(PropTypes.number)
+};
+
+const User = (props) => {
+  const { name, age, occupation } = props;
+  
+  return (
+    <div>
+      My name is {name}. I am {age} years old. I am a {occupation}
+    </div>
+  );
+};
+
+const UserList = () => {
+  return (
+    <div>
+      <h3>User List</h3>
+      <User
+        name="John"
+        age={25}
+        occupation="Web Developer"
+      />
+      <User
+        name="Jane"
+        age={28}
+        occupation="UI/UX Designer"
+      />
+    </div>
+  );
+};
+  
+export default User;
+
+!import PropTypes from "prop-types";
+  
+const User = (props) => {
+  const { name, age, occupation } = props;
+  return (
+    <div>
+      My name is {name}. I am {age} years old. I am a {occupation}
+    </div>
+  );
+};
+  
+!Validating prop types
+User.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  occupation: PropTypes.string,
+};
+  
+!Defining default props
+User.defaultProps = {
+  name: "N/A",
+  age: 0,
+  occupation: "Not Occupied",
+};
+  
+export default User;
+
+	
+<User name="Jill" age={'35'} occupation="Quality Analyst" />
+
+PropTypes.any
+
+!https://react.dev/learn
 Vite -- Next Generation Frontend Tooling { better create-react-app }
 npm create vite@latest react-dev -- --template react
 npm install && npm run dev
@@ -40,10 +506,10 @@ dist folder created instead of build folder when u build
 !-------------------------------------------------------------------
 <div>
   {isLoggedIn ? (<AdminPanel />) : (<LoginForm />)}
-</div>
+  </div>
 
 <div>
-  {isLoggedIn && <AdminPanel />}
+{isLoggedIn && <AdminPanel />}
 </div>
 
 const products = [
@@ -60,8 +526,8 @@ const listItems = products.map((product) => {
 
 return (
   <ul>{listItems}</ul>
-);
-
+  );
+  
 !Jonathan Wexler - Get Programming with Node.js-Manning Publications (2019).pdf
 !{libgen.is, singlelogin.me}
 !Graphic Javascript Algorithms -> {e-book}
@@ -439,7 +905,7 @@ class Person {
   constructor(name) {
     this.name = name;
   }
-
+  
   walk() {
     console.log("walk");
   }
@@ -473,7 +939,7 @@ function DoSomething() {}
 const DoSomething = () => {}
 export const DoSomething = () => {}
 <button
-	onClick={() => {
+onClick={() => {
 		console.log("Hello World!");
 		}}
 ></button>;
@@ -589,7 +1055,7 @@ export default function App() {
     <div>
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
-    </div>
+      </div>
     );
   }
 ----------------------------------------------------------------------
@@ -697,8 +1163,8 @@ export default function ShoopingList() {
     key={product.id}
     style={{
       color: product.isFruit ? 'magenta' : 'darkgreen'
-      }}
-      >
+    }}
+    >
       {product.title}
       </li>
   );
@@ -707,7 +1173,7 @@ export default function ShoopingList() {
     <ul>{listItems}</ul>
     );
   }
---------------------------------------------------------------------------------------------
+  --------------------------------------------------------------------------------------------
 Updating the screen
 import { useState } from 'react';
 function MyButton() {
@@ -721,7 +1187,7 @@ export default function MyApp() {
   return (
     <div>
     <h1>Counters that update separately</h1>
-      <MyButton />
+    <MyButton />
       <MyButton />
       </div>
       );
@@ -741,7 +1207,7 @@ function MyButton() {
     );
   }
   ------------------------------------------------------------------------------------------
-!To implement a UI in React, you will usually follow the same five steps.
+  !To implement a UI in React, you will usually follow the same five steps.
 !Step 1: Break the UI into a component hierarchy
 !Step 2: Build a static version in React
 !App.js
@@ -752,8 +1218,8 @@ function ProductCategoryRow({ category }) {
         {category}
       </th>
     </tr>
-  );
-}
+    );
+  }
 
 function ProductRow({ product }) {
   const name = product.stocked ? product.name :
@@ -793,8 +1259,8 @@ function ProductRow({ product }) {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Price</th>
+        <th>Name</th>
+        <th>Price</th>
           </tr>
           </thead>
           <tbody>{rows}</tbody>
@@ -805,7 +1271,7 @@ function ProductRow({ product }) {
 function SearchBar() {
   return (
     <form>
-      <input type="text" placeholder="Search..." />
+    <input type="text" placeholder="Search..." />
       <label>
         <input type="checkbox" />
         {' '}
@@ -821,8 +1287,8 @@ function FilterableProductTable({ products }) {
     <SearchBar />
       <ProductTable products={products} />
       </div>
-  );
-}
+      );
+    }
 
 const PRODUCTS = [
   {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
@@ -876,7 +1342,7 @@ function ProductRow({ product }) {
 
       return (
     <tr>
-      <td>{name}</td>
+    <td>{name}</td>
       <td>{product.price}</td>
     </tr>
   );
@@ -914,7 +1380,7 @@ function ProductTable({ products, filterText, inStockOnly }) {
       
       return (
         <table>
-      <thead>
+        <thead>
       <tr>
       <th>Name</th>
       <th>Price</th>
@@ -933,9 +1399,9 @@ function SearchBar({ filterText, inStockOnly }) {
     value={filterText}
     placeholder="Search..."/>
     <label>
-        <input
-        type="checkbox"
-        checked={inStockOnly} />
+    <input
+    type="checkbox"
+    checked={inStockOnly} />
         {' '}
         Only show products in stock
       </label>
@@ -986,10 +1452,10 @@ function ProductCategoryRow({ category }) {
   }
   
   function ProductRow({ product }) {
-  const name = product.stocked ? product.name :
-  <span style={{ color: 'red' }}>
+    const name = product.stocked ? product.name :
+    <span style={{ color: 'red' }}>
       {product.name}
-    </span>;
+      </span>;
     
   return (
     <tr>
@@ -1017,7 +1483,7 @@ function ProductTable({ products, filterText, inStockOnly }) {
     if (product.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow
-          category={product.category}
+        category={product.category}
           key={product.category} />
           );
     }
@@ -1032,7 +1498,7 @@ function ProductTable({ products, filterText, inStockOnly }) {
   return (
     <table>
     <thead>
-        <tr>
+    <tr>
         <th>Name</th>
         <th>Price</th>
         </tr>
@@ -1121,7 +1587,7 @@ class Human {
   constructor() {
     this.gender = 'male';
   }
-
+  
   printGender() {
     console.log(this.gender);
   }
@@ -1146,7 +1612,7 @@ person.printGender();
 !---------------------------------------- ES7 --------------------------------------------
 class Human {
   gender = 'male';
-
+  
   printGender() {
     console.log(this.gender);
   }
@@ -1219,4 +1685,70 @@ public class JavaExample {
     }
 }
 
+Job Responsibilities:
+
+Take charge of improving the performance and containment process
+Autonomously implement given ideas and guidelines
+Write a reliable, deployable, and no-code product
+Collaborate closely with cross-functional teams, developers, and team leads
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Engineering, Computer Science (or equivalent experience)
+At least 3+ years of relevant experience as a software developer
+Extensive experience working with API Integration and React.js
+Prolific knowledge and experience with Cloud databases and Docker containers
+Prior experience working with multi-factor authentication and metrics
+Demonstrable experience with Data privacy and Anonymization
+Nice to have some experience with security expertise
+Fluent in spoken and written English communication
+
+Job Responsibilities:
+
+Develop new features while addressing issues
+Deliver within six months of joining at least one new feature or significant bug repair per week
+Raise questions and refute presumptions
+Before you are expected to begin coding, make sure there has been thorough and explicit documentation and discussion
+Provide a lot of comments in your code
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Engineering, Computer Science (or equivalent experience)
+At least 6+ years of relevant experience as a software engineer
+6+ years of experience working with Node.js
+Prolific experience with AWS and AWS Lambda
+Prior knowledge of project scoping and problem tracking utilizing Monday.com
+Extensive experience with the GitHub code repository
+In-depth knowledge of the collaborative tools Google Docs, Slack, and Zoom
+Demonstrable experience applying a consistent naming standard and writing clean code
+Nice to have some knowledge of DynamoDB
+Excellent spoken and written English communication skills
+
+Job Responsibilities:
+
+Management should be consulted regarding the operational needs of software solutions
+Engage in knowledge-sharing on the possibilities, dangers, and operational effects of information systems
+Encourage young software developers to obtain expertise, report to management, and take on DevOps duties
+Control the solution's installation and configuration
+Along with developers, interpret test stage results and work on software requirements
+Take charge of full-script and code upgrades, as well as fixing implementation issues with the product
+Supervise the carrying out of diagnostic tests and regular maintenance operations
+Install and configure software, gather test-stage data, and perform debugging
+Process documentation and performance metrics observation
+Follow industry standards for network management and cybersecurity
+
+Job Requirements:
+
+Bachelor’s/Master’s degree in Engineering, Computer Science, IT, or Information Systems (or equivalent experience)
+At least 3+ years of relevant experience as a DevOps Engineer
+Ability to ensure smooth software deployment by writing script updates and running diagnostics
+Proficient experience in documenting processes and monitoring performance metrics
+Exceptional interpersonal and communication skills
+Strong Expertise with IAC technologies like Terraform and Pulumi
+Advanced knowledge of programming languages like Python and Java, and writing code and scripts
+Experience with Kubernetes cluster management and application deployment
+Strong expertise with software development lifecycle tools like Jenkins, GitHub Actions, ArgoCD, and Atlantis
+Prolific experience working with Monitoring Solutions
+Demonstrable Cloud provider experience with technologies like AWS, Azure, and GCP
+Fluent in written and spoken English communication
 */

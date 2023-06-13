@@ -69,7 +69,6 @@ await
 //     console.log(i)
 // } while (i < 10);
 
-
 // let i = 0;
 // while (i < 10) {
 //     i += 2;
@@ -87,17 +86,15 @@ await
 //     i++;
 // }
 
-// // For-of-statement
+// For-of-statement
 // for (const el in [2,4,6,8) {
 //     document.write(el);
 // }
 
-
-// // Labels
+// Labels
 // start: for (let i = 0; i < count; i++) {
 //     console.log(i);
 // }
-
 
 // let num = 0;
 // for (let i = 1; i < 10; i++) {
@@ -108,7 +105,6 @@ await
 // }
 // console.log(num); // 4
 
-
 // let num = 0;
 // for (let i = 1; i < 10; i++) {
 //     if (i % 5 == 0) {
@@ -117,7 +113,6 @@ await
 //     num++;
 // }
 // console.log(num); // 8
-
 
 // let num = 0;
 // outermost:
@@ -131,8 +126,6 @@ await
 // }
 // console.log(num);   // 55
 
-
-
 // let num = 0;
 // outermost:
 // for (let i = 0; i < 10; i++) {
@@ -145,7 +138,6 @@ await
 // }
 // console.log(num);       // 95
 
-
 // with (expression) statement;
 // let qs = location.search.substring(1);
 // let hostName = location.hostname;
@@ -156,7 +148,6 @@ await
 //     let hostName = hostname;
 //     let url = href;
 // }
-
 
 // switch (i) {
 //     case 25:
@@ -172,8 +163,45 @@ await
 //         console.log("Other");
 // }
 
+/* ---------------- Chapter 5: Basic Reference Types --------------- */
 // let now = new Date();
 // let someDate = new Date(Date.parse("May 23, 2019"));
 // console.log(new Date(Date.parse("May 23, 2019")));
 // let someDate = new Date("May 23, 2019");
 // console.log(new Date("May 23, 2019"));
+
+// May 5, 2005 at 5:55:55 PM GMT
+let allFivesUTC = new Date(Date.UTC(2005, 4, 5, 17, 55, 55));
+console.log(allFivesUTC);
+
+// May 5, 2005 at 5:55:55 PM local time
+let allFives = new Date(2005, 4, 5, 17, 55, 55);
+console.log(allFives);
+
+/* ----------- The Number Type ----------------- */
+/* let num = 10;
+console.log(num.toString());
+console.log(num.toString(2)); // "1010"
+console.log(num.toString(8)); // "12"
+console.log(num.toString(10)); // "10"
+console.log(num.toString(16)); */
+
+// console.log(num.toFixed(2));
+// console.log(num.toExponential(1));
+
+let num = 99;
+console.log(num.toPrecision(1)); // "1e+2"
+console.log(num.toPrecision(2)); // "99"
+console.log(num.toPrecision(3));
+
+let stringValue = 'foo';
+console.log(stringValue.padStart(6)); // " foo"
+console.log(stringValue.padStart(9, '.')); // "......foo"
+console.log(stringValue.padEnd(6)); // "foo "
+console.log(stringValue.padEnd(9, '.')); // "foo......"
+
+let max = Math.max(3, 54, 32, 16);
+console.log(max); // 54
+
+let min = Math.min(3, 54, 32, 16);
+console.log(min); // 3

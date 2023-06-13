@@ -1,16 +1,19 @@
 //! Coding Addict -- { :YouTube }
 //! reactjs.org, react.dev
 //! Install Quokka.js
+//? e.preventDefault();
+// ps -eo pid,ppid,cmd,%mem | sort -nk4 | head -5
+//  TODO:
+//@
+//*
 //! Section 3: React Fundamentals
 //! dspace@DSpace-KYU:~/Build/webapps/xmlui/themes/Mirage2/xsl/core$page-structure.xsl
-// Vite -- Next Generation Frontend Tooling { better create-react-app }
-// npm create vite@latest react-dev -- --template react
+//! npm create vite@latest react-dev -- --template react
 // npm install && npm run dev
 
-// npx create-react-app tutorial
-// npx create-react-app@latest tutorial {:Incase the 1st one doesn't work also helps i initiate git repo}
+// npx create-react-app@latest tutorial
 // Get-ChildItem -Force  { List Hidden Files }
-// Ctrl + D { Select Word} -> Ctrl + Shift + L (Select All Occurences)
+// Ctrl + D { Select Word } -> Ctrl + Shift + L (Select All Occurences)
 
 // VS Code Extensions
 // Auto Rename Tag
@@ -46,11 +49,38 @@
 
 // https://www.amazon.com/Best-Sellers-Books/zgbs/books/
 
-// Book List
-// JSX - JavaScript
-//! { Video: Javascript Nuggets - Destructuring (object) }
+//! ------------- { Video: JavaScript Nuggets - Destructuring (Array) } ------------
 /*
-#objectdestructuring
+#arraydestructuring
+const fruits = ['orange', 'banana', 'lemon'];
+const friends = ['john', 'peter', 'bob', 'anna', 'kelly'];
+
+const fruit1 = fruits[0];
+const fruit2 = fruits[1];
+const fruit3 = fruits[2];
+console.log(fruit1, fruit2, fruit3);
+
+const [john, peter, bob, anna, kelly] = friends;
+console.log(john, peter, bob, anna, kelly);
+const [enemy, , bob, , kelly, susan] = friends;
+console.log(enemy, bob, kelly, susan);
+
+let first = 'bob';
+let second = 'john';
+
+let temp = second;
+second = first;
+first = temp;
+console.log(first, second);
+
+[second, first] = [first, second];
+console.log(first, second);
+#arraydestructuring
+*/
+
+//! --------------- { Video: Javascript Nuggets - Destructuring (object) } --------------
+/*
+#object-destructuring
 const bob = {
   first: 'bob',
   last: 'sanders',
@@ -74,11 +104,12 @@ const {
   siblings: { sister: favoriteSibling },
 } = bob;
 console.log(first, last, city, favoriteSibling);
-#objectdestructuring
+#object-destructuring
 */
 
 //! https://www.youtube.com/watch?v=f_sEWa5hA0Q
-//! { Video: Javascript Nuggets - Map } moment --> npm package for dates & time
+//! --------------------- { Video: Javascript Nuggets - Map } ---------------
+//? moment --> npm package for dates & time
 /*
 #map
 const people = [
@@ -124,9 +155,9 @@ result.innerHTML = names.join('');
  */
 
 // [ React Events] (https://reactjs.org/docs/events.html)
-//! { Video: Javascript Nuggets - Spread Operator } ...
+//! -------------------- { Video: Javascript Nuggets - Spread Operator } --------------
 /*
-#spreadoperator
+#spread-perator
 const udemy = 'udemy';
 const letters = [...udemy];
 console.log(letters);
@@ -157,37 +188,8 @@ console.log(newPerson);
 #spreadoperator
 */
 
-//! [ Video: JavaScript Nuggets - Destructuring (Array) ]
-/*
-#arraydestructuring
-const fruits = ['orange', 'banana', 'lemon'];
-const friends = ['john', 'peter', 'bob', 'anna', 'kelly'];
-
-const fruit1 = fruits[0];
-const fruit2 = fruits[1];
-const fruit3 = fruits[2];
-console.log(fruit1, fruit2, fruit3);
-
-const [john, peter, bob, anna, kelly] = friends;
-console.log(john, peter, bob, anna, kelly);
-const [enemy, , bob, , kelly, susan] = friends;
-console.log(enemy, bob, kelly, susan);
-
-let first = 'bob';
-let second = 'john';
-
-let temp = second;
-second = first;
-first = temp;
-console.log(first, second);
-
-[second, first] = [first, second];
-console.log(first, second);
-#arraydestructuring
-*/
-
 // FusionCharts
-//! { Video: Javascript Nuggets - Filter and Find }
+//! ------------- { Video: Javascript Nuggets - Filter and Find } ---------------------
 /*
 #filterandfind
 const people = [
@@ -231,55 +233,80 @@ console.log(anna[0].position); // filter
 #filterandfind
 */
 
-// npm run build
 // netlify.com: { magical-vacherin-4bf4c3 }
 // https://react-course-fundamentals-walherb.netlify.app/
 
 //! Backroads Application
 // rel = 'noreferrer';
 // rmdir - Force - Recurse.git;
-// rd / s / q.git;
-// git init;
+// rd /s /q .git;
 
-//! Project Deployment --
 /*
-@used
-https://main--temp-backroads-app-walherb.netlify.app/
-rm -rf .git
-git init
-git add .
-git commit -m "first commit"
-git remote add origin https://github.com/walherb/temp-backroads-app.git
-git branch -M main
-git push -u origin main
-
-@used
-git clone https://github.com/walherb/temp-backroads-app.git
-npm install && npm start
-commit && push on VS Code
-
-!VITE
-npm create vite@latest my-react-app -- --template react
-npm install && npm run dev
-
-; --------------------------------------------------------------
-git remote add origin https://github.com/walherb/03-advanced-react.git
-git branch -M main
-git push -u origin main
-
-git remote add origin https://github.com/walherb/react-course-v3.git
-git branch -M main
-git push -u origin main
-
-[JavaScript Nuggets - Destructuring (Array)]
-[JavaScript Nuggets - Filter and Find]
-
-@Stopped at Video: 91
-
 !CSS
 Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
 Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
-
-
-
 */
+
+//! ----------------- Javascript Nuggets - Unique Values (ES6) ---------------
+const menu = [
+  {
+    name: 'pancakes',
+    category: 'breakfast',
+  },
+  {
+    name: 'burger',
+    category: 'lunch',
+  },
+  {
+    name: 'steak',
+    category: 'dinner',
+  },
+  {
+    name: 'bacon',
+    category: 'breakfast',
+  },
+  {
+    name: 'eggs',
+    category: 'breakfast',
+  },
+  {
+    name: 'pasta',
+    category: 'dinner',
+  },
+];
+const categories = ['all', ...new Set(menu.map((item) => item.category))];
+console.log(categories);
+// const result = document.querySelector('.result');
+// result.innerHTML = categories
+//   .map((category) => {
+//     return `<button>${category}</button>`;
+//   })
+//   .join('');
+
+//! ------------------ { Javascript Nuggets - Dynamic Object Keys } ------------------
+let appState = 'loading';
+appState = 'error';
+const keyName = 'computer';
+const app = {
+  [appState]: true,
+};
+app[keyName] = 'apple';
+console.log(app);
+
+const state = {
+  loading: true,
+  name: '',
+  job: '',
+};
+function updateState(key, value) {
+  state[key] = value;
+}
+updateState('name', 'john');
+updateState('job', 'developer');
+updateState('loading', false);
+
+updateState('products', []);
+updateState('name', 'peter');
+console.log(state);
+
+//! ----------------- { Javascript Nuggets - Async _ Await } --------------------

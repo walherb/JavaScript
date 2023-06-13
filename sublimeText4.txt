@@ -1,0 +1,2 @@
+Terminus -- plugin for opening a terminal in Sublime Text 4
+Alt+`
