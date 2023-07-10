@@ -72,7 +72,7 @@ for (let counter = 0; counter < 10; counter = counter + 1) {
 }
 console.log(result);
 
-// Finds the first number that is both greater than or equal to 20 and divisible by 7
+Finds the first number that is both greater than or equal to 20 and divisible by 7
 for (let current = 20; ; current = current + 1) {
   if (current % 7 == 0) {
     console.log(current);
@@ -109,7 +109,7 @@ for (let y = 0; y < size; y++) {
 }
 console.log(board);
 
-// --------------Mosh--------------------
+--------------Mosh--------------------
 /* for (let num = 1; num <= 100; num++) {
   if (num % 3 === 0 && num % 5 === 0) return 'FizzBUzz';
   if (num % 3 === 0) return 'Fizz';
@@ -418,4 +418,4 @@ reverseArrayInPlace(arrayValue);
 console.log(arrayValue); // → [5, 4, 3, 2, 1]
 console.log(['A', 'B', 'C'].reverse());
 
-//! Stopped on Page 82
+//! ------------------------------- Stopped on Page 82 ----------------------------------

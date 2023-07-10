@@ -1,0 +1,811 @@
+/* css rule */
+/* selector */
+/* declaration block */
+/* declaration */
+/* property */
+/* value */
+/* ctrl+space */
+
+/* 
+h1 {
+  color: green;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+h2 {
+  color: red;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+p {
+  color: grey;
+}
+h1 {
+  font-size: 60px;
+}
+h2,
+p {
+  color: green;
+}
+
+#parag {
+  color: #ff0000;
+  background: black;
+}
+
+#first {
+  color: white;
+  background-color: black;
+}
+
+#second {
+  color: red;
+  background: yellow;
+}
+
+.outer {
+  width: 300px;
+  height: 300px;
+  background: blue;
+}
+
+.inner {
+  width: 50%;
+  height: 50%;
+  background: red;
+}
+
+.absolute {
+  font-size: 32px;
+}
+
+.relative {
+  font-size: 2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  background: green;
+  height: 100vh;
+  width: 100vw;
+}
+
+.about {
+  background: blue;
+  height: 43vh;
+  width: 54vw;
+}
+
+.navbar {
+  background: blue;
+  height: 100px;
+  color: white;
+  font-size: 3rem;
+}
+
+.banner {
+  background: red;
+  /* height: calc(100vh - 100px); *
+  /
+  min-height: calc(100vh - 6rem);
+  max-height: 90vh;
+  overflow: hidden;
+  overflow: scroll;
+}
+
+.example {
+  background: green;
+  width: 20rem;
+  height: 25rem;
+  overflow: hidden;
+  overflow: scroll;
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-style: italic;
+  font-weight: 700;
+}
+
+p {
+  text-indent: 50px;
+} */
+
+/* CSS BOX Model */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid red; / * hack to show all elements on a page* /
+} */
+
+/* h1,
+p {
+  color: white;
+} */
+
+/* h1 {
+  background: red;
+  padding-top: 40px;
+  /* margin-top: 20px; * /
+  margin: 10px;
+  border: 0.5rem solid black;
+  border-radius: 10px;
+} */
+
+/* p {
+  background: blue;
+  / * padding: 40px; * /
+  / * padding: 30px 40px; * /
+  / * padding: 5px 20px 50px 40px; * /
+  margin: 10px;
+  padding: 15px;
+  border: 7px dotted green;
+  border-radius: 50%;
+  margin-top: -50px;
+}
+
+.links {
+  margin: 3rem;
+}
+
+a {
+  background: #689f3f;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  color: #222;
+  text-transform: uppercase;
+  margin: 0 20px;
+}
+
+#one {
+  border: 0.2rem solid #222;
+}
+
+#two {
+  outline: 0.2rem solid #222;
+  outline-offset: -20px;
+} */
+
+/* Display Property */
+/* 
+ELEMENTS HAVE IT SET BY DEFAULT 
+BLOCK : Always starts a new line and spans full width 
+INLINE: Does not start a new line and spans only content
+*/
+
+/* .block {
+  background: blue;
+  color: white;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.inline {
+  background: red;
+  color: white;
+}
+
+body {
+  text-align: center;
+} */
+
+/* span {
+  background: blue;
+  color: white;
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+} */
+
+/* /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} * /
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  color: #f15025;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  background: #222;
+  display: block;
+  padding: 5px;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.box-1 {
+  background: red;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.box-2 {
+  background: blue;
+}
+.box-3 {
+  background: green;
+  padding: 20px;
+}
+
+a {
+  font-size: 1.5rem;
+  background: red;
+  width: 40px;
+  height: 40px;
+  margin: 40px 10px;
+  display: inline-block;
+} */
+
+/* div {
+  background: #f15025;
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.none {
+  display: none;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.opacity-5 {
+  opacity: 0.5;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.visibility {
+  visibility: hidden;
+} */
+
+/* background images */
+/* https://colorzilla.com */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  min-height: 100vh;
+  color: white;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.big-img {
+  background: url('./big.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; * /
+}
+.small-img {
+  background: url('./images/folder-img.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.folder-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./big.jpeg') center/cover no-repeat fixed;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; * /
+  /* background-attachment: fixed; * /
+} */
+
+/* div {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+
+.one {
+  background: linear-gradient(to top, blue, green);
+}
+.two {
+  background: linear-gradient(to left, blue, green, red, yellow, #f15025);
+}
+
+.three {
+  background: linear-gradient(300deg, red, green);
+}
+
+.four {
+  background: linear-gradient(to top left, red, green);
+}
+
+.five {
+  background: linear-gradient(blue 20%, yellow 70%);
+}
+
+.six {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+} */
+
+/* Positions Float Media Queries */
+/* .banner {
+  border: 5px solid red;
+}
+
+.one {
+  float: left;
+}
+
+.two {
+  float: right;
+}
+
+p {
+  clear: left;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 200px;
+  width: 25%;
+  float: left;
+}
+
+.one {
+  background: red;
+}
+.two {
+  background: green;
+}
+.three {
+  background: blue;
+}
+.four {
+  background: yellow;
+} */
+
+/* .nav {
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+div {
+  border: 3px solid red;
+  background: yellow;
+  margin-top: 40px;
+}
+
+.one {
+  background: blue;
+  color: white;
+  /* position: relative; * /
+  /* top: 200px; * /
+}
+
+.two {
+  background-color: green;
+  color: white;
+  /* position: relative; * /
+}
+
+.special {
+  background: pink;
+  font-size: 20px;
+  color: #222;
+  /* position: absolute;
+  top: 0;
+  left: 0; * /
+}
+
+.container {
+  height: 100vh;
+  border: 2px solid red;
+  background: blue;
+} */
+
+/* media queries */
+/* body {
+  background: yellow;
+}
+
+.banner {
+  background: blue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    background: red;
+  }
+  .banner {
+    background: yellow;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+} */
+
+/* z-index */
+/* img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+.banner {
+  margin: 20px;
+  width: 80vw;
+  height: 70vh;
+  border: 5px solid green;
+  position: relative;
+}
+
+.one {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.two {
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+}
+
+.three {
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+} */
+
+/* ::before and ::after 
+::before ::after pseudo-elements creates elements and inserts before and aftre CONTENT
+content:''- required
+img --- does not work
+*/
+/* p::before {
+  content: 'hello there ';
+  display: block;
+  background: #222;
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+
+p::after {
+  content: '';
+  width: 100%;
+  height: 3rem;
+  display: block;
+  background: #222;
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+} */
+
+/* div {
+  width: 70vw;
+  margin: 100px auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+div::before {
+  content: '';
+  border: 2px solid grey;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -2;
+  transition: all 0.5s linear;
+}
+
+div::after {
+  content: '';
+  background: rgba(128, 128, 128, 0.5);
+  /* background: grey; * /
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+
+div:hover::before,
+div:hover::after {
+  top: 0;
+  left: 0;
+} */
+
+/* inset */
+/* * {
+  margin: 0;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background: orange;
+  margin-bottom: 1rem;
+}
+
+.special {
+  position: relative;
+}
+
+.special h1 {
+  position: absolute;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; * /
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+} */
+
+/* More Selectors */
+
+/* 
+transform:translate(),scale(),rotate(),skew()
+*/
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+/* div:hover {
+  background: coral;
+} * /
+
+.one {
+  background: red;
+  /* transform: translateX(50%); * /
+  /* transform: skewX(40deg); * /
+}
+.two {
+  background: blue;
+  /* top: 10px;
+  left: 10px; */
+/* transform: translate(50%, 50%);
+  transform: scale(1.2, 1.5); * /
+  /* transform: rotate(20deg); * /
+}
+.three {
+  background: green;
+  /* transform: translateX(75px); * /
+  /* transition-property: background, border-radius;
+  transition-duration: 4s, 2s;
+  transition-delay: 2s; * /
+  /* transition: background 2s 1s, border-radius 3s, 2s; * /
+  transition: all 2s 1s;
+}
+
+.three:hover {
+  background: coral;
+  border-radius: 50%;
+  transform: scale(1.2);
+} */
+
+/* div {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+}
+
+.transition {
+  background: red;
+  transition: all 2s linear;
+}
+
+.transition:hover {
+  background: yellow;
+  transform: translateX(100px);
+}
+
+.animation {
+  background: blue;
+  /* animation: move;
+  animation-duration: 10s;
+  animation-iteration-count: 3;  
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(100px);
+    background: red;
+  }
+  75% {
+    transform: translateX(-200px);
+    background: yellow;
+  }
+  100% {
+    transform: translateX(20px);
+    background: green;
+  }
+} */
+
+/* More CSS Tutorial */
+/* :root {
+  --primaryColor: #2539f1;
+  --cl-secondary: purple;
+  --mainTransition: all 1s linear;
+  --mainSpacing: 5px;
+}
+h1 {
+  color: var(--primaryColor);
+}
+h2 {
+  color: var(--primaryColor);
+}
+h3 {
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+
+p {
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+
+h3:hover {
+  color: var(--cl-secondary);
+}
+
+p:hover {
+  color: var(--cl-secondary);
+}
+
+div {
+  --primaryRed: red;
+}
+
+.main-text {
+  color: var(--primaryRed);
+} */
+
+/* font-awesome icons 
+fontawesome cdnjs
+*/
+/* .fa-solid {
+  font-size: 2rem;
+  color: red;
+} */
+/* .fa-house {
+  font-size: 2rem;
+  color: red;
+}
+
+.special {
+  font-size: 4rem;
+  color: blue;
+} */
+
+/* text & box shadow */
+/* x-axis y-axis blur color */
+/* h1 {
+  text-shadow: 5px 0px 0px red;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  margin: 20px;
+  box-shadow: 3px 5px 5px green;
+} */
+
+/* Browser Prefixes */
+/* https://caniuse.com */
+/* https://shouldiprefix.com */
+
+/* object-fit */
+img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+
+.one {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+.two {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+
+/* is() */
+:is(nav, header, section) h2:hover {
+  color: red;
+}
+
+/* not() */
+.special :not(h1) {
+  color: red;
+}
+
+/* hsl - hue saturation lightness */
+/* hsl(0, 100%, 50%) */
