@@ -1,0 +1,47 @@
+/*! prettier-plugin-tailwindcss package Tailwind-Fold vs code extension Material-UI scss  Styled Components Daisy UI Inline Fold Chakra UI @apply (Mosh Twitter) Tailwind CSS Intellisense Tailwind CSS Autocomplete Redis Sass NestJS TypeORM PostCSS NGINX Kubernetes AWS->Terraform Github GraphQL Apollo stripe Auth0 aws Recognition Twilio Serverless */
+
+/*! Build a Blog on Linode Using Tailwind CSS | Bootstrap Alternative {Linode YT} */
+
+/*! Stopped on Video 1 -> 5:12 */
+
+/* @media only screen and (min-width: 768px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: blue;
+  }
+} */
+
+html {
+  font-size: 22px;
+}
+
+body {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+a {
+  color: aliceblue;
+  /* text-decoration: none; */
+}
+
+a:visited {
+  color: lightgray;
+}
+
+
+a:hover, a:active {
+  color: #eee;
+}
+
+table, tr, th, td, caption {
+  border: 1px solid #eee;
+  font-family: 'Courier New', Courier, monospace;
+  border-collapse: collapse;
+  padding: 0.5rem;  
+}

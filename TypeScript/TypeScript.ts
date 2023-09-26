@@ -1,7 +1,7 @@
 // Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz   2.71 GHz
 // HP ProBook 450 G4
 // ESLint
-// settings -> eslint: probe -> {typescript, typescriptreact} 
+// settings -> eslint: probe -> {typescript, typescriptreact}
 // npm install --save-dev typescript
 // npx create-react-app myapp --template typescript
 // npm i -D prettier
@@ -71,25 +71,25 @@
 
 /* -------------------- Learn React with Typescript ------------------- */
 let unitPrice: number;
-let today: Date;
+let todays: Date;
 
 type Product = { name: string; unitPrice?: number };
-let table: Product = { name: "Table" };
-let chair: Product = { name: "Chair", unitPrice: 40 };
+let table: Product = { name: 'Table' };
+let chair: Product = { name: 'Chair', unitPrice: 40 };
 type DiscountedProduct = Product & { discount: number }; // extending
 
 /* -------------------------------------------------------------------- */
 
-let x: number = 3;
+let xx: number = 3;
 let y: string = 'Hello World!';
 let z: boolean = true;
-let n: any;
+let nn: any;
 let m: unknown;
 
 function p(): void {}
 
-var nums: number[] = [1, 2, 3, 4];
-const numbers: Array<number> = []
+var numss: number[] = [1, 2, 3, 4];
+const numberss: Array<number> = [];
 var tuple: [string, number] = ['Hello', 2];
 var obj: object = {};
 
@@ -216,63 +216,63 @@ let postId: string | number; // union type
 let isActive: number | boolean | string;
 
 const sum = (a: number, b: number) => {
-  return a + b
-}
+  return a + b;
+};
 
-let re: RegExp = /\w+/g
+let re: RegExp = /\w+/g;
 
 /* --------------- Arrays, Objects --------------------- */
 /* ---------Arrays---------- */
-let stringArr = ['one', 'hey', 'Dave']
-let guitars = ['Start', 'Les Paul', 5150]
-let mixedData= ['EVH', 1984, true]
-let bands: string[] = []
-bands.push('Van Halen')
+let stringArr = ['one', 'hey', 'Dave'];
+let guitars = ['Start', 'Les Paul', 5150];
+let mixedData = ['EVH', 1984, true];
+let bands: string[] = [];
+bands.push('Van Halen');
 
-// Tuple 
-let myTuple: [string, number, boolean] = ['Dave', 42, true]
+// Tuple
+let myTuple: [string, number, boolean] = ['Dave', 42, true];
 
 /* ----------- Objects --------------- */
-let myObj: object 
+let myObj: object;
 
 const exampleObj = {
   prop1: 'Dave',
   prop2: true,
-}
+};
 
 type Guitarist = {
-  name?: string, // optional
-  active?: boolean, 
-  albums: (string | number)[]
-}
+  name?: string; // optional
+  active?: boolean;
+  albums: (string | number)[];
+};
 
 interface GuitaristI {
-  name: string, 
-  active?: boolean, // optional
-  albums: (string | number)[]
+  name: string;
+  active?: boolean; // optional
+  albums: (string | number)[];
 }
 
 let evh: Guitarist = {
   name: 'Eddie',
   active: false,
-  albums: [1984, 5150, 'OU812']
-}
+  albums: [1984, 5150, 'OU812'],
+};
 
 let jp: Guitarist = {
   name: 'Jimmy',
   active: true,
-  albums: ['I', 'II', 'IV']
-}
+  albums: ['I', 'II', 'IV'],
+};
 
 // const greetGuitarist = (guitarist: Guitarist) => {
 //   return `Hello ${guitarist.name}!`
 // }
 
 const greetGuitarist = (guitarist: Guitarist) => {
-  return `Hello ${guitarist.name?.toUpperCase()}!`
-}
+  return `Hello ${guitarist.name?.toUpperCase()}!`;
+};
 
-console.log(greetGuitarist(jp))
+console.log(greetGuitarist(jp));
 
 /* -------------- Enums-------------- */
 enum Grade {
@@ -283,79 +283,79 @@ enum Grade {
   A,
 }
 
-console.log(Grade.U)
+console.log(Grade.U);
 
 /* -------------- Functions ----------------- */
 // Type Aliases
-type stringOrNumber = string | number 
-type stringOrNumberArray = (string | number)[] 
+type stringOrNumber = string | number;
+type stringOrNumberArray = (string | number)[];
 
-// Literal types 
-let username: 'Dave' | 'John' | 'Amy'
-username = 'Amy'
+// Literal types
+let username: 'Dave' | 'John' | 'Amy';
+username = 'Amy';
 
 // functions
 const add = (a: number, b: number): number => {
-  return a + b
-}
+  return a + b;
+};
 
 const logMsg = (message: any): void => {
-  console.log(message)
-}
+  console.log(message);
+};
 
-logMsg('Hello!')
-logMsg(add(2, 3))
+logMsg('Hello!');
+logMsg(add(2, 3));
 
-type mathFunction = (a: number, b: number) => number
+type mathFunction = (a: number, b: number) => number;
 // interface mathFunction {(a: number, b: number): number}
 
 let multiply: mathFunction = function (c, d) {
-  return c * d
-}
+  return c * d;
+};
 
-logMsg(multiply(2, 2))
+logMsg(multiply(2, 2));
 
 // opional parameters
 const addAll = (a: number, b: number, c?: number): number => {
-  if (typeof c !== 'undefined'){
-    return a + b + c
+  if (typeof c !== 'undefined') {
+    return a + b + c;
   }
-  return a + b
-}
+  return a + b;
+};
 
 // defualt parameters
 const sumAll = (a: number, b: number, c: number = 2): number => {
-  return a + b + c
-}
+  return a + b + c;
+};
 
-logMsg(addAll(2, 3, 2))
-logMsg(addAll(2, 3))
-logMsg(sumAll(2, 3))
+logMsg(addAll(2, 3, 2));
+logMsg(addAll(2, 3));
+logMsg(sumAll(2, 3));
 
 // Rest parameters
-const total = (...nums: number[]): number => {
-  return nums.reduce((prev, curr) => prev + curr)
-}
+const totals = (...nums: number[]): number => {
+  return nums.reduce((prev, curr) => prev + curr);
+};
 
-logMsg(total(1, 2, 3, 4))
+logMsg(totals(1, 2, 3, 4));
 
 // ---------------- never -------------------
 const createError = (errMsg: string): never => {
-  throw new Error(errMsg)
-}
+  throw new Error(errMsg);
+};
 
 // -------------- Completed Video 4 ---------------
 // -------------- Video 12: React TypeScript Tutorial for Beginners --------------
-// npm create vite@latest -> React -> TypeScript 
-// npm i && npm run dev 
+// npm create vite@latest -> React -> TypeScript
+// npm i && npm run dev
 
 // Section.tsx
-import { ReactNode } from 'react';
+// import { ReactNode } from 'react';
 
-type SectionProps = {
-  title?: string,
-  children: ReactNode
-}
+// type SectionProps = {
+//   title?: string,
+//   children: ReactNode
+// }
 /* 
 export const Section = ({ children, title = 'My Subheading'}: SectionProps) => {
   return (
@@ -374,4 +374,100 @@ return (
   <button onClick={() => setCount(prev => prev - 1)}>-</button>
 )
  */
-// Vite Site -> guide -> Deploying a Static Site 
+// Vite Site -> guide -> Deploying a Static Site
+
+/* ------------ TypeScript Tuttorial for Beginners - Mosh -------------- */
+/* 
+Benefits 
+- Static typing 
+- Code competion 
+- Refactoring 
+- Shorthand notations
+Drawbacks
+- Compilation 
+- Discipline in coding 
+npm i -g typescript 
+tsc -v
+tsc index.ts
+tsc --init 
+JavaScript          TypeScript
+number              any
+string              unknown 
+boolean             never 
+null                enum 
+undefined           tuple 
+object
+*/
+let sales: number = 123_456_789;
+let course: string = 'TypeScript';
+let is_published: boolean = true;
+
+let numbersi: number[] = [1, 2, 3];
+
+//  -------- tuple ------------
+let user: [number, string] = [1, 'Mosh'];
+
+// ----------- enums {PascalCase} ---------
+const enum Size {
+  Small = 1,
+  Medium,
+  Large,
+}
+let mySize: Size = Size.Medium;
+
+// -------------- functions ------------
+function calculateTax(income: number): number {
+  return 0;
+}
+
+// ----------- objects -------------
+// let employee: {
+//   readonly id: number;
+//   name: string;
+//   retire: (date: Date) => void;
+// } = {
+//   id: 1,
+//   name: 'Mosh',
+//   retire: (date: Date) => {
+//     console.log(date);
+//   },
+// };
+
+//  --------------- alias ------------
+type Employee = {
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
+};
+
+let employee: Employee = {
+  id: 1,
+  name: 'Mosh',
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
+
+//  ----------- union types -----------------
+function kgToLbs(weight: number | string): number {
+  // narrowing
+  if (typeof weight === 'number') return weight * 2.2;
+  else return parseInt(weight) * 2.2;
+}
+
+//  ------------ intersection types ----------
+type Draggable = {
+  drag: () => void;
+};
+type Resizable = {
+  resize: () => void;
+};
+type UIWidget = Draggable & Resizable;
+let textBox: UIWidget = {
+  drag: () => {},
+  resize: () => {},
+};
+
+// ---------- Literal Types -------------
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;

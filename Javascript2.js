@@ -12,7 +12,7 @@ var myLinks = document.getElementByTagName("a");
 console.log("Links: ", myLinks.length);
 
 var myListItems = document.getElementByTagName("li");
-var myFirstList = document.getElementByID("abc");
+var myFirstList = document.getElementById("abc");
 var limitedlist = myFirstList.getElementByTagName("li");
 
 var mainContent = document.getElementById("mainContent");
@@ -99,7 +99,7 @@ today.getFullYear(); // YYY not zero-based
 today.getDate(); // 1-31
 today.getDay(); // 0-6  0 == sunday
 today.getHours(); // 0-23
-today.getTime(); // milliseconds since 1/1/11970
+today.getTime(); // milliseconds since 1/1/1970
 
 OBJECTS
 var player1 = {name: "Fred", score: 1000, rank: 1};
@@ -731,7 +731,7 @@ var result = calculateSum();
 /* FORMS
 TEXTFIELDS
 text.value property
-//main events
+!main events
 onfocus
 onBlur
 onchange
@@ -878,7 +878,7 @@ CREATE REGULAR EXPRESSIONS */
 // 	// console.log(myRequest.readyState);
 //  };
  
- // YHEN configure and send
+//  WHEN configure and send
 //  myRequest.open("GET", "http://mysite.com/somedata.php", true);
 //  myRequest.send(null);
  
